@@ -1,8 +1,7 @@
 import React, {useState} from 'react';
 
-// import CardBoard from "./Components/CardBoard";
+import CardBoard from "./Components/CardBoard";
 import './App.css';
-import Card from './Components/Card';
 
 function App() {
 
@@ -15,46 +14,12 @@ function App() {
 
   const [cards, setCards] = useState(initialCards);
 
-  //Functions
-
-  const flipCard = (id) => {
-    const newState = cards.map((item) => {
-      if(item.id === id){
-        const updateItem = {
-          ...item,
-          flipped: !item.flipped,
-        }
-        return updateItem;
-      }
-      return item;
-    });
-    setCards(newState);
-
-  }
-
   return (
-    <div>
-      {cards.map(card => (
-				<Card
-          key={card.id}
-          cards={cards}
-          color={card.color}
-          setCards={setCards}
-          flipped={card.flipped}
-          onClick={() => flipCard(card.id) }
-				/>
-				))}
+    <div className="App">
+      <CardBoard
+        cards={cards}
+        setCards={setCards} />
     </div>
-    
-
-
-    // <div className="App">
-    //   <CardBoard
-    //     onClick={flipCard}
-    //     cards={cards}
-    //     id={cards}
-    //     setCards={setCards} />
-    // </div>
   );
 }
 
