@@ -7,9 +7,11 @@ const Card = ({ color, cards, setCards,id }) => {
     // Flip Card
     const flipCard = (e) => {
       
-      setCards(cards.map((card)=>{
-        return cards
-      }))
+        cards.map(item => 
+            item.id === cards.id 
+            ? console.log('działa')
+            : null
+    )
 
     }
 

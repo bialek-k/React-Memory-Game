@@ -4,7 +4,6 @@ import Card from './Card';
 
 export const CardBoard = ({ cards, setCards, id }) => {
 
-    console.log(id)
 
     return (
         <div className="App">
