@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 
-import Card from "./Components/Card";
+import CardBoard from "./Components/CardBoard";
 import './App.css';
 
 function App() {
@@ -12,18 +12,13 @@ function App() {
     { id: 4, color: "blue", flipped: false }
   ]);
 
-
+  //Functions
 
   return (
     <div className="App">
-      {cards.map(card => (
-        <Card
-          key={card.id} 
-          color={card.color}
-          flipped={card.flipped}
-          setCard={setCards}
-          cards={cards}/>
-      ))}
+      <CardBoard
+        cards={cards}
+        setCards={setCards} />
     </div>
   );
 }

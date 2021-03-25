@@ -2,20 +2,26 @@ import React from 'react'
 
 import "./Card.css";
 
-const Card = ({ color, cards, setCards}) => {
-  
-  const flipCard = () => {
-    setCards(cards.map((item) => {
+const Card = ({ color, cards, setCards }) => {
+
+    // Flip Card
+    const flipCard = () => {
       
-    }))
-  }
-  
+      setCards(cards.map(card => {
+        return {
+          ...cards,
+          flipped: !card.flipped
+        }
+        return card;
+      }))
+
+    }
+
   return (
-    <div 
-      className="card" 
-      onClick={flipCard}
-      color={color}>{color}
-     </div>
+    <div className="card"
+          onClick={flipCard}
+          color={color}>{color}
+    </div>
   )
 }
 
