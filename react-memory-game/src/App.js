@@ -13,7 +13,6 @@ function App() {
   ]);
 
   //Functions
-
   return (
     <div className="App">
       <CardBoard

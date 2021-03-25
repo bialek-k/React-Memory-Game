@@ -2,16 +2,19 @@ import React from 'react'
 
 import Card from './Card';
 
-export const CardBoard = ({ cards, setCards }) => {
+export const CardBoard = ({ cards, setCards, id }) => {
+
+    console.log(id)
 
     return (
         <div className="App">
             {cards.map(card => (
                 <Card
+                id={card.id}
                 key={card.id} 
                 color={card.color}
                 flipped={card.flipped}
-                setCard={setCards}
+                setCards={setCards}
                 cards={cards}/>
       ))}
         </div>

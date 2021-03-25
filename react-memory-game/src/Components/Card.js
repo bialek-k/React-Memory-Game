@@ -2,17 +2,13 @@ import React from 'react'
 
 import "./Card.css";
 
-const Card = ({ color, cards, setCards }) => {
+const Card = ({ color, cards, setCards,id }) => {
 
     // Flip Card
-    const flipCard = () => {
+    const flipCard = (e) => {
       
-      setCards(cards.map(card => {
-        return {
-          ...cards,
-          flipped: !card.flipped
-        }
-        return card;
+      setCards(cards.map((card)=>{
+        return cards
       }))
 
     }
@@ -20,7 +16,8 @@ const Card = ({ color, cards, setCards }) => {
   return (
     <div className="card"
           onClick={flipCard}
-          color={color}>{color}
+          color={color}
+          id={id}>{color}
     </div>
   )
 }
