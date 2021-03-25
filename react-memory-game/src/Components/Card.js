@@ -2,13 +2,15 @@ import React from 'react'
 
 import "./Card.css";
 
-const Card = ({ color, id }) => {
+const Card = ({ color, onClick, flipped }) => {
 
  
   return (
     <div className="card"
+          style={{backgroundColor: flipped ? color : 'gray'}}
           color={color}
-          id={id}>{color}
+          onClick={onClick}
+          >{color}
     </div>
   )
 }

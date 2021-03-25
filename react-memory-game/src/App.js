@@ -17,7 +17,20 @@ function App() {
 
   //Functions
 
-  // const flipCard()
+  const flipCard = (id) => {
+    const newState = cards.map((item) => {
+      if(item.id === id){
+        const updateItem = {
+          ...item,
+          flipped: !item.flipped,
+        }
+        return updateItem;
+      }
+      return item;
+    });
+    setCards(newState);
+
+  }
 
   return (
     <div>
@@ -25,7 +38,10 @@ function App() {
 				<Card
           key={card.id}
           cards={cards}
+          color={card.color}
           setCards={setCards}
+          flipped={card.flipped}
+          onClick={() => flipCard(card.id) }
 				/>
 				))}
     </div>
