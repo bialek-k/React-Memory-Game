@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState} from 'react';
 
 import CardBoard from "./Components/CardBoard";
 import './App.css';
@@ -10,8 +10,8 @@ function App() {
     { id: 2, color: "blue", flipped: false },
     { id: 3, color: "red", flipped: false },
     { id: 4, color: "blue", flipped: false }
-  ] 
-
+  ];
+  
   const [cards, setCards] = useState(initialCards);
   const [ frontCard, setFrontCard ] = useState([]);
 
