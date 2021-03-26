@@ -13,12 +13,15 @@ function App() {
   ] 
 
   const [cards, setCards] = useState(initialCards);
+  const [ frontCard, setFrontCard ] = useState([]);
 
   return (
     <div className="App">
       <CardBoard
         cards={cards}
-        setCards={setCards} />
+        setCards={setCards}
+        frontCard={frontCard}
+        setFrontCard={setFrontCard} />
     </div>
   );
 }

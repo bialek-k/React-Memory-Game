@@ -2,7 +2,7 @@ import React from 'react'
 
 import "./Card.css";
 
-const Card = ({ color, onClick, flipped, setCards, cards, id }) => {
+const Card = ({ color, onClick, flipped, setCards, cards, id, frontCard, setFrontCard }) => {
 
 
    //Functions
@@ -18,15 +18,18 @@ const Card = ({ color, onClick, flipped, setCards, cards, id }) => {
       return item;
     });
     setCards(newState);
-    compareCard();
+    compareCard(id, newState);
   }
 
   // Add Card to compare
-  const compareCard = () => {
-    console.log('dziala')
+  const compareCard = (id, newState) => {
+    let newArr = newState[id -1];
+    setFrontCard([
+      ...frontCard,
+      newArr
+    ]);
   }
-
-
+  
   return (
     <div className="card"
       onClick={() => flipCard(id)}
