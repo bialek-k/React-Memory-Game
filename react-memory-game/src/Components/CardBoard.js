@@ -4,9 +4,10 @@ import Card from './Card';
 const CardBoard = ({ cards, setCards, frontCard, setFrontCard}) => {
 	return (
 		<div className="App">
-			{cards.map(card => (
+			{cards.map((card) => (
 				<Card
-					key={card.id} 
+					key={card.id}
+					card={card} 
 					color={card.color}
 					flipped={card.flipped}
 					setCards={setCards}

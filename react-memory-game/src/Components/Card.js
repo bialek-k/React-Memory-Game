@@ -2,7 +2,7 @@ import React from 'react'
 
 import "./Card.css";
 
-const Card = ({ color, onClick, flipped, setCards, cards, id, frontCard, setFrontCard }) => {
+const Card = ({ color, card, flipped, setCards, cards, id, frontCard, setFrontCard }) => {
 
 
    //Functions
@@ -18,24 +18,31 @@ const Card = ({ color, onClick, flipped, setCards, cards, id, frontCard, setFron
       return item;
     });
     setCards(newState);
-    compareCard(id, newState);
-  }
-
-  // Add Card to compare
-  const compareCard = (id, newState) => {
-    let newArr = newState[id -1];
-    setFrontCard([
-      ...frontCard,
-      newArr
-    ]);
+    compareHandler(newState)
   }
   
+  // Add Card to new Array for compare
+
+
+  const compareHandler = (newState) => {
+    newState.map((changedCard) => {
+      if(changedCard.id === id){
+        return { changedCard }
+      }
+      return newState;
+    });
+
+    setFrontCard([
+      ...frontCard,
+      newState
+    ]);
+  }
+
   return (
     <div className="card"
       onClick={() => flipCard(id)}
       style={{backgroundColor: flipped ? color : 'gray'}}
-      color={color}
-      >{flipped ? color : null}
+      color={color}>{flipped ? color : null}
     </div>
   )
 }
