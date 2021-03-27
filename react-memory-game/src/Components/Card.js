@@ -10,7 +10,7 @@ const Card = ({ color, flipped, setCards, cards, id, frontCard, setFrontCard }) 
       if(item.id === id){
         const updateItem = {
           ...item,
-          flipped: !item.flipped,
+          flipped: true,
         }
         return updateItem;
       }
