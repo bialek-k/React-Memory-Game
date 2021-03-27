@@ -18,25 +18,16 @@ const Card = ({ color, card, flipped, setCards, cards, id, frontCard, setFrontCa
       return item;
     });
     setCards(newState);
-    compareHandler(newState)
+    compareHandler(newState, id)
   }
   
+
   // Add Card to new Array for compare
+    const compareHandler = (newState, id) => {
+      const cCard = newState.filter((card) => card.id === id);
+      setFrontCard([ ...frontCard, ...cCard]);
+    }
 
-
-  const compareHandler = (newState) => {
-    newState.map((changedCard) => {
-      if(changedCard.id === id){
-        return { changedCard }
-      }
-      return newState;
-    });
-
-    setFrontCard([
-      ...frontCard,
-      newState
-    ]);
-  }
 
   return (
     <div className="card"

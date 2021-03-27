@@ -1,4 +1,4 @@
-import React, { useState} from 'react';
+import React, { useState, useEffect} from 'react';
 
 import CardBoard from "./Components/CardBoard";
 import './App.css';
@@ -14,6 +14,12 @@ function App() {
   
   const [cards, setCards] = useState(initialCards);
   const [ frontCard, setFrontCard ] = useState([]);
+
+  useEffect(() => {
+    if(frontCard.length > 1){
+      let color = 
+    }
+  },[frontCard])
 
   return (
     <div className="App">
