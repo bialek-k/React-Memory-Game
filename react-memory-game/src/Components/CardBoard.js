@@ -1,7 +1,22 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Card from './Card';
 
-const CardBoard = ({ cards, setCards, frontCard, setFrontCard}) => {
+const CardBoard = ({ cards, setCards, frontCard, setFrontCard, cardFound, setCardFound}) => {
+
+    useEffect(() => {
+		if(frontCard.length > 1){
+		  if(frontCard[0].color === frontCard[1].color){
+			console.log("znalazłeś");
+			setCardFound([ ...frontCard, ...cardFound]);
+			setFrontCard([]);
+			
+		  } else {
+			console.log("szukaj dalej");
+		  }
+		}
+	  },[frontCard]);
+
+
 	return (
 		<div className="App">
 			{cards.map((card) => (
@@ -15,6 +30,8 @@ const CardBoard = ({ cards, setCards, frontCard, setFrontCard}) => {
 					setFrontCard={setFrontCard}
 					cards={cards}
 					id={card.id}
+					cardFound={cardFound}
+        			setCardFound={setCardFound}
 				/>
 			))}
 		</div>

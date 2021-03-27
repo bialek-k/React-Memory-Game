@@ -12,14 +12,11 @@ function App() {
     { id: 4, color: "blue", flipped: false }
   ];
   
-  const [cards, setCards] = useState(initialCards);
+  const [ cards, setCards ] = useState(initialCards);
   const [ frontCard, setFrontCard ] = useState([]);
+  const [ cardFound, setCardFound ] = useState([]);
 
-  useEffect(() => {
-    if(frontCard.length > 1){
-      let color = 
-    }
-  },[frontCard])
+  
 
   return (
     <div className="App">
@@ -27,7 +24,9 @@ function App() {
         cards={cards}
         setCards={setCards}
         frontCard={frontCard}
-        setFrontCard={setFrontCard} />
+        setFrontCard={setFrontCard}
+        cardFound={cardFound}
+        setCardFound={setCardFound} />
     </div>
   );
 }
