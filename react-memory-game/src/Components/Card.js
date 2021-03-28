@@ -4,7 +4,7 @@ import "./Card.css";
 
 const Card = ({ color, flipped, setCards, cards, id, frontCard, setFrontCard }) => {
 
-   //Functions
+   //Functions Flip Card
    const flipCard = (id) => {
     const newState = cards.map((item) => {
       if(item.id === id){
@@ -14,17 +14,16 @@ const Card = ({ color, flipped, setCards, cards, id, frontCard, setFrontCard }) 
         }
         return updateItem;
       }
+      
       return item;
     });
-
     setCards(newState);
-    compareHandler(newState, id)
-    
+    compareHandler(newState, id);
   }
-  
+
   // Add Card to new Array for compare
   const compareHandler = (newState, id) => {
-    const clickedCard = newState.filter((card) => card.id === id);
+    const clickedCard = newState.filter((card) => card.id === id)
     setFrontCard([ ...frontCard, ...clickedCard]);
   }
 

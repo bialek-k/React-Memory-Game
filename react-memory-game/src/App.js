@@ -16,8 +16,6 @@ function App() {
   const [ frontCard, setFrontCard ] = useState([]);
   const [ cardFound, setCardFound ] = useState([]);
 
-  
-
   return (
     <div className="App">
       <CardBoard
@@ -26,6 +24,7 @@ function App() {
         frontCard={frontCard}
         setFrontCard={setFrontCard}
         cardFound={cardFound}
+        initialCards={initialCards}
         setCardFound={setCardFound} />
     </div>
   );
