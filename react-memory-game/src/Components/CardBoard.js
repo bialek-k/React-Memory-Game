@@ -20,7 +20,7 @@ finalCards, setFinalCards}) => {
 	}
 	endGame();
 }	,[frontCard]);
-
+	
 	const flipCardBack = () => {
 		// const newState = cards.filter((card) => card.flipped === true);
 		// newState.map((card) => card.flipped = false);
