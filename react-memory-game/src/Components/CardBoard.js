@@ -22,8 +22,8 @@ finalCards, setFinalCards}) => {
 }	,[frontCard]);
 	
 	const flipCardBack = () => {
-		// const newState = cards.filter((card) => card.flipped === true);
-		// newState.map((card) => card.flipped = false);
+		const newState = cards.filter((card) => card.flipped === true);
+		newState.map((card) => card.flipped = false);
 	}
 	
 	if(frontCard.length === 2 && frontCard[0].color !== frontCard[1].color ){

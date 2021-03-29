@@ -20,7 +20,7 @@ function App() {
     { id: 12, color: "cyan", flipped: false },
   ];
 
-  initialCards.sort(() => Math.random() - 0.6);
+  initialCards.sort(() => Math.random() - 0.5);
   
   const [ cards, setCards ] = useState(initialCards);
   const [ frontCard, setFrontCard ] = useState([]);
