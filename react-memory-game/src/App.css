@@ -4,6 +4,20 @@ body{
   justify-content: center;
   align-items: center;
 }
+
+.wrap{
+  display: flex;
+  justify-content: cetner;
+  align-items: center;
+  width: 100%;
+  /* background-color: aqua; */
+}
 .App{
-display: flex;
+  display: flex;
+  margin-top: 50px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 50vw;
+  /* background-color: red; */
 }

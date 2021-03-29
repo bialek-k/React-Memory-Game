@@ -1,9 +1,17 @@
-.card {
+/* .card {
   width: 200px;
-  height: 350px;
+  height: 250px;
   background-color: gray;
   border-radius: 5px;
   margin: 10px;
   color: white;
   text-align: center;
+} */
+
+.card{
+  flex: 1 0 21%;
+  margin: 10px;
+  height: 250px;
+  border-radius: 10px;
+  background-color: gray;
 }
