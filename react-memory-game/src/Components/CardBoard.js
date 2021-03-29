@@ -1,7 +1,8 @@
 import React, { useEffect } from 'react'
 import Card from './Card';
 
-const CardBoard = ({ cards, setCards, frontCard, setFrontCard, cardFound, setCardFound, initialCards}) => {
+const CardBoard = ({ cards, setCards, frontCard, setFrontCard, cardFound, setCardFound, initialCards,
+finalCards, setFinalCards}) => {
 
 	useEffect(() => {
 	if(frontCard.length > 1){
@@ -9,6 +10,7 @@ const CardBoard = ({ cards, setCards, frontCard, setFrontCard, cardFound, setCar
 			console.log("znalazłeś");
 			setCardFound([ ...frontCard, ...cardFound]);
 			setFrontCard([]);
+			saveFinalCards();
 		}else{
 			console.log("szukaj dalej")
 			setTimeout(() => {
@@ -19,15 +21,20 @@ const CardBoard = ({ cards, setCards, frontCard, setFrontCard, cardFound, setCar
 	endGame();
 }	,[frontCard]);
 
-const flipCardBack = () => {
-		const newState = cards.filter((card) => card.flipped === true);
-		newState.map((card) => card.flipped = false);
+	const flipCardBack = () => {
+		// const newState = cards.filter((card) => card.flipped === true);
+		// newState.map((card) => card.flipped = false);
 	}
 	
 	if(frontCard.length === 2 && frontCard[0].color !== frontCard[1].color ){
 		setTimeout(() => {
 			flipCardBack();		
 		},1000)
+	}
+
+	// Save findedCard;
+	const saveFinalCards = () => {
+		setFinalCards([...finalCards, ...frontCard])
 	}
 	
 

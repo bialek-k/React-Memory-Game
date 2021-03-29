@@ -14,4 +14,12 @@
   height: 250px;
   border-radius: 10px;
   background-color: gray;
+  color: white;
+  font-size: 3rem;
+}
+.cardID{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
 }

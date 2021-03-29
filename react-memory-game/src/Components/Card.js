@@ -27,11 +27,13 @@ const Card = ({ color, flipped, setCards, cards, id, frontCard, setFrontCard }) 
     setFrontCard([ ...frontCard, ...clickedCard]);
   }
 
+
   return (
     <div className="card"
       onClick={() => flipCard(id)}
-      style={{backgroundColor: flipped ? color : 'gray'}}
-      color={color}>{flipped ? id : null}
+      style={{backgroundColor: flipped ? color : "gray"}}
+      color={color}>
+        {/* <div className="cardID">{flipped ? id : null}</div> */}
     </div>
   )
 }
