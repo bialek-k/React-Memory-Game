@@ -18,12 +18,20 @@ finalCards, setFinalCards}) => {
 			},1000)
 		}
 	}
-	endGame();
+	// endGame();
 }	,[frontCard]);
-	
+
+	// Save finalCards;
+	const saveFinalCards = () => {
+		setFinalCards([...finalCards, ...frontCard])
+	}
+
 	const flipCardBack = () => {
-		const newState = cards.filter((card) => card.flipped === true);
-		newState.map((card) => card.flipped = false);
+
+		const newSet = finalCards.map((card) => card.flipped === true);
+		setCards([...initialCards]);
+	
+
 	}
 	
 	if(frontCard.length === 2 && frontCard[0].color !== frontCard[1].color ){
@@ -32,10 +40,6 @@ finalCards, setFinalCards}) => {
 		},1000)
 	}
 
-	// Save findedCard;
-	const saveFinalCards = () => {
-		setFinalCards([...finalCards, ...frontCard])
-	}
 	
 
 	const endGame = () =>{
@@ -68,3 +72,14 @@ finalCards, setFinalCards}) => {
 }
 
 export default CardBoard;
+
+
+/* Flip Back Cards backup
+
+	const flipCardBack = () => {
+		const newState = cards.filter((card) => card.flipped === true);
+		newState.map((card) => card.flipped = false);
+	}
+
+*/
+	
