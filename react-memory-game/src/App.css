@@ -1,23 +1,7 @@
-body{
-  background-color:rgb(59, 59, 59);
+.app{
   display: flex;
   justify-content: center;
   align-items: center;
-}
+  height: 100vh;
 
-.wrap{
-  display: flex;
-  justify-content: cetner;
-  align-items: center;
-  width: 100%;
-  /* background-color: aqua; */
-}
-.App{
-  display: flex;
-  margin-top: 50px;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  width: 50vw;
-  /* background-color: red; */
 }

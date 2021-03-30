@@ -1,25 +1,11 @@
-/* .card {
+.card {
+  height: 300px;
   width: 200px;
-  height: 250px;
-  background-color: gray;
-  border-radius: 5px;
   margin: 10px;
-  color: white;
-  text-align: center;
-} */
+  border-radius: 12px;
+  box-shadow: 0px 0px 8px rgb(136, 136, 136);
+  background-color: rgba(192, 192, 192, 0.596);
+  border: 1px solid rgb(184, 184, 184);
 
-.card{
-  flex: 1 0 21%;
-  margin: 10px;
-  height: 250px;
-  border-radius: 10px;
-  background-color: gray;
-  color: white;
-  font-size: 3rem;
-}
-.cardID{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
+  
 }

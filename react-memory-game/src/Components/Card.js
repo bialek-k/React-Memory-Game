@@ -2,6 +2,8 @@ import React from 'react'
 
 import "./Card.css";
 
+
+
 const Card = ({ color, flipped, setCards, cards, id, frontCard, setFrontCard }) => {
 
    //Functions Flip Card
@@ -27,11 +29,21 @@ const Card = ({ color, flipped, setCards, cards, id, frontCard, setFrontCard }) 
     setFrontCard([ ...frontCard, ...clickedCard]);
   }
 
+  const cardFront = {
+    background: `url(${color})`,
+    backgroundSize: '90%',
+    backgroundRepeat: 'no-repeat',
+    backgroundPosition: 'center',
+  }
+
+  const cardBack = {
+    background: "rgba(192, 192, 192, 0.596)",
+  }
 
   return (
     <div className="card"
       onClick={() => flipCard(id)}
-      style={{backgroundColor: flipped ? "gray" : color}}
+      style={flipped ? cardFront : cardBack}
       color={color}>
         {/* <div className="cardID">{flipped ? id : null}</div> */}
     </div>

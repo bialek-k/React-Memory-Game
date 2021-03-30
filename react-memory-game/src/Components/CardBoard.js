@@ -1,6 +1,8 @@
 import React, { useEffect } from 'react'
 import Card from './Card';
 
+import './CardBoard.css'
+
 const CardBoard = ({ cards, setCards, frontCard, setFrontCard, cardFound, setCardFound, initialCards,
 finalCards, setFinalCards}) => {
 
@@ -30,7 +32,6 @@ finalCards, setFinalCards}) => {
 
 		const newSet = finalCards.map((card) => card.flipped === true);
 		setCards([...initialCards]);
-	
 
 	}
 	
@@ -51,7 +52,7 @@ finalCards, setFinalCards}) => {
 	}
 
 	return (
-		<div className="App">
+		<div className="cardBoard">
 			{cards.map((card) => (
 				<Card
 					key={card.id}
