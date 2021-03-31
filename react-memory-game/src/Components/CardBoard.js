@@ -8,34 +8,35 @@ finalCards, setFinalCards}) => {
 
 	useEffect(() => {
 	if(frontCard.length > 1){
-		if(frontCard[0].color === frontCard[1].color){
+		if(frontCard[0].photo === frontCard[1].photo){
 			console.log("znalazłeś");
 			setCardFound([ ...frontCard, ...cardFound]);
 			setFrontCard([]);
-			saveFinalCards();
+			// saveFinalCards();
 		}else{
 			console.log("szukaj dalej")
 			setTimeout(() => {
-				setFrontCard([]);
+				setFrontCard([...cards]);
 			},1000)
 		}
 	}
 	// endGame();
 }	,[frontCard]);
 
-	// Save finalCards;
-	const saveFinalCards = () => {
-		setFinalCards([...finalCards, ...frontCard])
-	}
 
-	const flipCardBack = () => {
 
-		const newSet = finalCards.map((card) => card.flipped === true);
-		setCards([...initialCards]);
+// Save finalCards;
+const saveFinalCards = () => {
+	setFinalCards([...finalCards, ...frontCard])
+}
 
+const flipCardBack = () => {
+	const newSet = finalCards.map((card) => card.flipped === true);
+	const cardsCovered = cards.filter((card) => card.flipped === true );
+		setCards([...cardsCovered]);
 	}
 	
-	if(frontCard.length === 2 && frontCard[0].color !== frontCard[1].color ){
+	if(frontCard.length === 2 && frontCard[0].photo !== frontCard[1].photo ){
 		setTimeout(() => {
 			flipCardBack();		
 		},1000)
@@ -57,7 +58,7 @@ finalCards, setFinalCards}) => {
 				<Card
 					key={card.id}
 					card={card} 
-					color={card.color}
+					photo={card.photo}
 					flipped={card.flipped}
 					setCards={setCards}
 					frontCard={frontCard}

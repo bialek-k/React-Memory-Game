@@ -4,7 +4,7 @@ import "./Card.css";
 
 
 
-const Card = ({ color, flipped, setCards, cards, id, frontCard, setFrontCard }) => {
+const Card = ({ photo, flipped, setCards, cards, id, frontCard, setFrontCard }) => {
 
    //Functions Flip Card
    const flipCard = (id) => {
@@ -22,15 +22,16 @@ const Card = ({ color, flipped, setCards, cards, id, frontCard, setFrontCard }) 
     setCards(newState);
     compareHandler(newState, id);
   }
+  
 
   // Add Card to new Array for compare
   const compareHandler = (newState, id) => {
     const clickedCard = newState.filter((card) => card.id === id)
     setFrontCard([ ...frontCard, ...clickedCard]);
   }
-
+  
   const cardFront = {
-    background: `url(${color})`,
+    background: `url(${photo})`,
     backgroundSize: '90%',
     backgroundRepeat: 'no-repeat',
     backgroundPosition: 'center',
@@ -44,7 +45,7 @@ const Card = ({ color, flipped, setCards, cards, id, frontCard, setFrontCard }) 
     <div className="card"
       onClick={() => flipCard(id)}
       style={flipped ? cardFront : cardBack}
-      color={color}>
+      photo={photo}>
         {/* <div className="cardID">{flipped ? id : null}</div> */}
     </div>
   )
