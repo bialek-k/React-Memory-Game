@@ -12,28 +12,34 @@ finalCards, setFinalCards}) => {
 			console.log("znalazłeś");
 			setCardFound([ ...frontCard, ...cardFound]);
 			setFrontCard([]);
-			// saveFinalCards();
+			saveFinalCards();
+			setCardFound([]);
 		}else{
 			console.log("szukaj dalej")
 			setTimeout(() => {
-				setFrontCard([...cards]);
+				setFrontCard([]);
+				setCardFound([]);
 			},1000)
 		}
 	}
 	// endGame();
 }	,[frontCard]);
 
+useEffect(() => {
+	setFinalCards([...cards]);
+},[])
+
 
 
 // Save finalCards;
 const saveFinalCards = () => {
-	setFinalCards([...finalCards, ...frontCard])
+	console.log(cards)
+	setFinalCards([...cards])
+	// setFinalCards([...finalCards, ...frontCard])
 }
 
 const flipCardBack = () => {
-	const newSet = finalCards.map((card) => card.flipped === true);
-	const cardsCovered = cards.filter((card) => card.flipped === true );
-		setCards([...cardsCovered]);
+	setCards([...finalCards])
 	}
 	
 	if(frontCard.length === 2 && frontCard[0].photo !== frontCard[1].photo ){
@@ -43,14 +49,16 @@ const flipCardBack = () => {
 	}
 
 	
-
-	const endGame = () =>{
+/*
+	const endGame = () =>{ 
 		if(cardFound.length === cards.length){
 			alert("Wygrałeś, odbierz darmowego iPhone!");
 			setCards([...initialCards]);
 			setCardFound([]);
 		}
 	}
+
+	*/
 
 	return (
 		<div className="cardBoard">
