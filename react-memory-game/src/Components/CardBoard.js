@@ -9,27 +9,28 @@ finalCards, setFinalCards}) => {
 	useEffect(() => {
 	if(frontCard.length > 1){
 		if(frontCard[0].photo === frontCard[1].photo){
-			console.log("znalazłeś");
-			setCardFound([ ...frontCard, ...cardFound]);
+			// console.log("znalazłeś");
+			setCardFound([ ...frontCard]);
 			setFrontCard([]);
 			saveFinalCards();
-			setCardFound([]);
+			setCardFound([...cardFound, ...frontCard]);
 		}else{
-			console.log("szukaj dalej")
+			// console.log("szukaj dalej")
 			setTimeout(() => {
 				setFrontCard([]);
-				setCardFound([]);
-			},1000)
+				// setCardFound([]);
+			},500)
 		}
 	}
-	// endGame();
+	if(cardFound.length === 12){
+		alert("Wygrałeś!!!");
+	}
+	
 }	,[frontCard]);
 
 useEffect(() => {
 	setFinalCards([...cards]);
 },[])
-
-
 
 // Save finalCards;
 const saveFinalCards = () => {
@@ -48,17 +49,6 @@ const flipCardBack = () => {
 		},1000)
 	}
 
-	
-/*
-	const endGame = () =>{ 
-		if(cardFound.length === cards.length){
-			alert("Wygrałeś, odbierz darmowego iPhone!");
-			setCards([...initialCards]);
-			setCardFound([]);
-		}
-	}
-
-	*/
 
 	return (
 		<div className="cardBoard">
@@ -82,14 +72,3 @@ const flipCardBack = () => {
 }
 
 export default CardBoard;
-
-
-/* Flip Back Cards backup
-
-	const flipCardBack = () => {
-		const newState = cards.filter((card) => card.flipped === true);
-		newState.map((card) => card.flipped = false);
-	}
-
-*/
-	
