@@ -8,7 +8,8 @@ import Skye_2 from './photos/Skye_2.png';
 import Zuma_2 from './photos/Zuma_2.png';
 
 
-import CardBoard from "./Components/CardBoard";
+import CardBoard from "./Components/CardBoard/CardBoard";
+import Player from "./Components/Player/Player"
 import './App.css';
 
 function App() {
@@ -38,6 +39,7 @@ function App() {
 
   return (
     <div className="app">
+      <Player />
       <CardBoard
         cards={cards}
         setCards={setCards}

@@ -11,4 +11,9 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
-}
+  }
+  
+  @font-face{
+    font-family: "GROBOLD";
+    src: local('GROBOLD'), url(./fonts/GROBOLD.ttf) format('truetype');
+  }

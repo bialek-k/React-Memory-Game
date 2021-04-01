@@ -1,14 +1,14 @@
 import React, { useEffect } from 'react'
-import Card from './Card';
+import Card from '../Card/Card';
 
 import './CardBoard.css'
 
-const CardBoard = ({ cards, setCards, frontCard, setFrontCard, cardFound, setCardFound, initialCards,
+const CardBoard = ({ cards, setCards, frontCard, setFrontCard, cardFound, setCardFound,
 finalCards, setFinalCards}) => {
 
 	useEffect(() => {
 	if(frontCard.length > 1){
-		if(frontCard[0].photo === frontCard[1].photo){
+		if(frontCard[0].photo === frontCard[1].photo && frontCard[0].id !== frontCard[1].id){
 			setCardFound([ ...frontCard]);
 			setFrontCard([]);
 			saveFinalCards();
@@ -24,7 +24,7 @@ finalCards, setFinalCards}) => {
 		alert("Wygrałeś!!!");
 	}
 	
-}	,[frontCard]);
+	},[frontCard]);
 
 	// First board load
 	useEffect(() => {

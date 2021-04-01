@@ -12,7 +12,7 @@ const Card = ({ photo, flipped, setCards, cards, id, frontCard, setFrontCard }) 
       if(item.id === id){
         const updateItem = {
           ...item,
-          flipped: true,
+          flipped: !item.flipped,
         }
         return updateItem;
       }
@@ -26,8 +26,9 @@ const Card = ({ photo, flipped, setCards, cards, id, frontCard, setFrontCard }) 
 
   // Add Card to new Array for compare
   const compareHandler = (newState, id) => {
-    const clickedCard = newState.filter((card) => card.id === id)
+    let clickedCard = newState.filter((card) => card.id === id);
     setFrontCard([ ...frontCard, ...clickedCard]);
+
   }
   
   const cardFront = {
