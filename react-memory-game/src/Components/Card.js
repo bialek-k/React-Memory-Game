@@ -46,7 +46,6 @@ const Card = ({ photo, flipped, setCards, cards, id, frontCard, setFrontCard }) 
       onClick={() => flipCard(id)}
       style={flipped ? cardFront : cardBack}
       photo={photo}>
-        {/* <div className="cardID">{flipped ? id : null}</div> */}
     </div>
   )
 }

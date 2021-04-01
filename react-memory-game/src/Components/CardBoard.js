@@ -9,44 +9,39 @@ finalCards, setFinalCards}) => {
 	useEffect(() => {
 	if(frontCard.length > 1){
 		if(frontCard[0].photo === frontCard[1].photo){
-			// console.log("znalazłeś");
 			setCardFound([ ...frontCard]);
 			setFrontCard([]);
 			saveFinalCards();
 			setCardFound([...cardFound, ...frontCard]);
 		}else{
-			// console.log("szukaj dalej")
 			setTimeout(() => {
 				setFrontCard([]);
-				// setCardFound([]);
 			},500)
 		}
 	}
+
 	if(cardFound.length === 12){
 		alert("Wygrałeś!!!");
 	}
 	
 }	,[frontCard]);
 
-useEffect(() => {
-	setFinalCards([...cards]);
-},[])
+	// First board load
+	useEffect(() => {
+		setFinalCards([...cards]);
+	},[]);
 
-// Save finalCards;
-const saveFinalCards = () => {
-	console.log(cards)
-	setFinalCards([...cards])
-	// setFinalCards([...finalCards, ...frontCard])
-}
-
-const flipCardBack = () => {
-	setCards([...finalCards])
+	// Save finalCards;
+	const saveFinalCards = () => {
+		console.log(cards)
+		setFinalCards([...cards])
 	}
 	
+	// Flip Card Back
 	if(frontCard.length === 2 && frontCard[0].photo !== frontCard[1].photo ){
 		setTimeout(() => {
-			flipCardBack();		
-		},1000)
+			setCards([...finalCards])
+		},500)
 	}
 
 
