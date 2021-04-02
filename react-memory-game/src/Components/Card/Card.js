@@ -4,7 +4,7 @@ import "./Card.css";
 
 
 
-const Card = ({ photo, flipped, setCards, cards, id, frontCard, setFrontCard }) => {
+const Card = ({ photo, flipped, setCards, cards, id, frontCard, setFrontCard}) => {
 
    //Functions Flip Card
    const flipCard = (id) => {

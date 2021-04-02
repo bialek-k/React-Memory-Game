@@ -4,7 +4,14 @@ import Card from '../Card/Card';
 import './CardBoard.css'
 
 const CardBoard = ({ cards, setCards, frontCard, setFrontCard, cardFound, setCardFound,
-finalCards, setFinalCards}) => {
+finalCards, setFinalCards, initialCards, endGame, setEndGame}) => {
+
+
+	// Sort at the beggining of game
+	useEffect(() => {
+		initialCards.sort(() => Math.random() - 0.5);
+	},[]);
+
 
 	useEffect(() => {
 	if(frontCard.length > 1){
@@ -19,17 +26,7 @@ finalCards, setFinalCards}) => {
 			},500)
 		}
 	}
-
-	if(cardFound.length === 12){
-		alert("Wygrałeś!!!");
-	}
-	
 	},[frontCard]);
-
-	// First board load
-	useEffect(() => {
-		setFinalCards([...cards]);
-	},[]);
 
 	// Save finalCards;
 	const saveFinalCards = () => {
@@ -44,6 +41,17 @@ finalCards, setFinalCards}) => {
 		},500)
 	}
 
+	console.log(endGame);
+
+	if(cardFound.length === 12){
+		setEndGame(true);
+		console.log(endGame)
+	}
+
+	// First board load
+	useEffect(() => {
+		setFinalCards([...cards]);
+	},[]);
 
 	return (
 		<div className="cardBoard">

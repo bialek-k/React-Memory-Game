@@ -29,13 +29,15 @@ function App() {
     { id: 12, photo: Zuma_2, flipped: false },
   ];
 
-  
-  // initialCards.sort(() => Math.random() - 0.5);
-  
+  // Initial Cards Stat
   const [ cards, setCards ] = useState(initialCards);
+  // Flipped Cards
   const [ frontCard, setFrontCard ] = useState([]);
+  // Matched cards
   const [ cardFound, setCardFound ] = useState([]);
+  
   const [ finalCards, setFinalCards ] = useState([]);
+  const [ endGame, setEndGame ] = useState(false);
 
   return (
     <div className="app">
@@ -49,7 +51,9 @@ function App() {
         initialCards={initialCards}
         setCardFound={setCardFound}
         finalCards={finalCards}
-        setFinalCards={setFinalCards} />
+        setFinalCards={setFinalCards}
+        endGame={endGame}
+        setEndGame={setEndGame} />
     </div>
   );
 }
