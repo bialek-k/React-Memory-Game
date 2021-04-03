@@ -50,7 +50,8 @@ function App() {
         setTime={setTime}
         timeOn={timeOn}
         setTimeOn={setTimeOn}
-        frontCard={frontCard} />
+        frontCard={frontCard}
+        cardFound={cardFound} />
       <CardBoard
         cards={cards}
         setCards={setCards}

@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import './Player.css'
 
-export const Player = ({time, timeOn, setTime, setTimeOn, frontCard }) => {
+export const Player = ({time, timeOn, setTime, setTimeOn, frontCard, cardFound }) => {
 
     useEffect(() => {
         setTimeOn(true);
@@ -13,7 +13,9 @@ export const Player = ({time, timeOn, setTime, setTimeOn, frontCard }) => {
         } else {
             clearInterval(interval);
         }
-        return () => clearInterval(interval)
+        if(cardFound.length === 12){
+            setTimeOn(false);
+        }
     },[frontCard])
 
     
