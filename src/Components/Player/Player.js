@@ -3,26 +3,29 @@ import './Player.css'
 
 export const Player = ({time, timeOn, setTime, setTimeOn, frontCard, cardFound }) => {
 
-    useEffect(() => {
-        setTimeOn(true);
-        let interval = null;
-        if(timeOn){
-            interval = setInterval(() => {
-                setTime(prevTime => prevTime + 10)
-            }, 10)
-        } else {
-            clearInterval(interval);
-        }
-        if(cardFound.length === 12){
-            setTimeOn(false);
-        }
-    },[frontCard])
+    // Timer function
 
+    // useEffect(() => {
+    //     setTimeOn(true);
+    //     let interval = null;
+    //     if(timeOn){
+    //         interval = setInterval(() => {
+    //             setTime(prevTime => prevTime + 10)
+    //         }, 10)
+    //     } else {
+    //         clearInterval(interval);
+    //     }
+    //     if(cardFound.length === 12){
+    //         setTimeOn(false);
+    //     }
+    // },[])
+
+    const dupa blada
     
 
     return (
         <div className="container">
-            <div className="player">IGOR</div>
+            <div className="player">Player</div>
             <div className="stats">
                 <div className="time">
                     <span>Time: </span> 
