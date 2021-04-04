@@ -8,24 +8,17 @@ finalCards, setFinalCards, initialCards, endGame, setEndGame}) => {
 
 	initialCards.sort(() => Math.random() - 0.5);
 
-	// Save finalCards;
-	const saveFinalCards = () => {
-		console.log(cards)
-		setFinalCards([...cards])
-	}
 	
 	if(frontCard.length > 1){
 		if(frontCard[0].photo === frontCard[1].photo && frontCard[0].id !== frontCard[1].id){
-			setCardFound([ ...frontCard]);
+			setCardFound([...frontCard]);
 			setFrontCard([]);
-			saveFinalCards();
+			setFinalCards([...cards])
 			setCardFound([...cardFound, ...frontCard]);
 		}else{
 			setFrontCard([]);
 		}
 	}
-
-
 	
 	// Flip Card Back
 	if(frontCard.length === 2 && frontCard[0].photo !== frontCard[1].photo ){
@@ -34,9 +27,10 @@ finalCards, setFinalCards, initialCards, endGame, setEndGame}) => {
 		},500)
 	}
 
-	if(cardFound.length === finalCards.length){
-		console.log("koniec gry")
+	if(cardFound.length === 12){
+		alert("Koniec Gry!")
 	}
+
 
 	// First board load
 	useEffect(() => {

@@ -31,6 +31,8 @@ const Card = ({ photo, flipped, setCards, cards, id, frontCard, setFrontCard}) =
 
   }
   
+  
+  
   const cardFront = {
     background: `url(${photo})`,
     backgroundSize: '90%',
@@ -38,9 +40,12 @@ const Card = ({ photo, flipped, setCards, cards, id, frontCard, setFrontCard}) =
     backgroundPosition: 'center',
   }
 
+  
+  
   const cardBack = {
     background: "rgba(192, 192, 192, 0.596)",
   }
+
 
   return (
     <div className="card"
