@@ -6,14 +6,14 @@ import './CardBoard.css'
 const CardBoard = ({ cards, setCards, frontCard, setFrontCard, cardFound, setCardFound,
 finalCards, setFinalCards, initialCards, endGame, setEndGame}) => {
 
+	initialCards.sort(() => Math.random() - 0.5);
 
-	// Sort at the beggining of game
-	useEffect(() => {
-		initialCards.sort(() => Math.random() - 0.5);
-	},[]);
-
-
-	useEffect(() => {
+	// Save finalCards;
+	const saveFinalCards = () => {
+		console.log(cards)
+		setFinalCards([...cards])
+	}
+	
 	if(frontCard.length > 1){
 		if(frontCard[0].photo === frontCard[1].photo && frontCard[0].id !== frontCard[1].id){
 			setCardFound([ ...frontCard]);
@@ -21,18 +21,11 @@ finalCards, setFinalCards, initialCards, endGame, setEndGame}) => {
 			saveFinalCards();
 			setCardFound([...cardFound, ...frontCard]);
 		}else{
-			setTimeout(() => {
-				setFrontCard([]);
-			},500)
+			setFrontCard([]);
 		}
 	}
-	},[frontCard]);
 
-	// Save finalCards;
-	const saveFinalCards = () => {
-		console.log(cards)
-		setFinalCards([...cards])
-	}
+
 	
 	// Flip Card Back
 	if(frontCard.length === 2 && frontCard[0].photo !== frontCard[1].photo ){
@@ -41,11 +34,8 @@ finalCards, setFinalCards, initialCards, endGame, setEndGame}) => {
 		},500)
 	}
 
-	console.log(endGame);
-
-	if(cardFound.length === 12){
-		setEndGame(true);
-		console.log(endGame)
+	if(cardFound.length === finalCards.length){
+		console.log("koniec gry")
 	}
 
 	// First board load

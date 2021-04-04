@@ -38,7 +38,6 @@ function App() {
   // Cards to check if game is end
   const [ finalCards, setFinalCards ] = useState([]);
   // End game
-  const [ endGame, setEndGame ] = useState(false);
   // Timer on Player component
   const [ time, setTime ] = useState(0);
   const [ timeOn, setTimeOn ] = useState(false);
@@ -62,8 +61,7 @@ function App() {
         setCardFound={setCardFound}
         finalCards={finalCards}
         setFinalCards={setFinalCards}
-        endGame={endGame}
-        setEndGame={setEndGame} />
+        />
     </div>
   );
 }
