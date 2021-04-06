@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 
+// Import photos
 import Rocky from './photos/Rocky.png';
 import Chase from './photos/Chase.png';
 import Marshall from './photos/Marshall.png';
@@ -7,10 +8,14 @@ import Rubble from './photos/Rubble.png';
 import Skye from './photos/Skye.png';
 import Zuma from './photos/Zuma.png';
 
-
+// Import components
 import CardBoard from "./Components/CardBoard/CardBoard";
 import Player from "./Components/Player/Player"
+
+// Import style.css
 import './App.css';
+
+
 
 function App() {
 
@@ -38,6 +43,7 @@ function App() {
   // Cards to check if game is end
   const [ finalCards, setFinalCards ] = useState([]);
   // End game
+
   // Timer on Player component
   const [ time, setTime ] = useState(0);
   const [ timeOn, setTimeOn ] = useState(false);

@@ -1,29 +1,23 @@
 import React from 'react'
-
 import "./Card.css";
 
-
-
 const Card = ({ photo, flipped, setCards, cards, id, frontCard, setFrontCard}) => {
-
-   //Functions Flip Card
-   const flipCard = (id) => {
-    const newState = cards.map((item) => {
-      if(item.id === id){
-        const updateItem = {
-          ...item,
-          flipped: !item.flipped,
-        }
-        return updateItem;
+  //Functions Flip Card
+  const flipCard = (id) => {
+  const newState = cards.map((item) => {
+    if(item.id === id){
+      const updateItem = {
+        ...item,
+        flipped: !item.flipped,
       }
-      
-      return item;
-    });
-    setCards(newState);
-    compareHandler(newState, id);
+      return updateItem;
+    }
+    return item;
+  });
+  setCards(newState);
+  compareHandler(newState, id);
   }
   
-
   // Add Card to new Array for compare
   const compareHandler = (newState, id) => {
     let clickedCard = newState.filter((card) => card.id === id);
@@ -31,21 +25,16 @@ const Card = ({ photo, flipped, setCards, cards, id, frontCard, setFrontCard}) =
 
   }
   
-  
-  
   const cardFront = {
     background: `url(${photo})`,
     backgroundSize: '90%',
     backgroundRepeat: 'no-repeat',
     backgroundPosition: 'center',
   }
-
-  
   
   const cardBack = {
     background: "rgba(192, 192, 192, 0.596)",
   }
-
 
   return (
     <div className="card"
@@ -55,6 +44,5 @@ const Card = ({ photo, flipped, setCards, cards, id, frontCard, setFrontCard}) =
     </div>
   )
 }
-
 
 export default Card;
