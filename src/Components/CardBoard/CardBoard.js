@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react'
 import Card from '../Card/Card';
-
 import './CardBoard.css'
 
 const CardBoard = ({ cards, setCards, frontCard, setFrontCard, cardFound, setCardFound, finalCards, setFinalCards, initialCards, endGame, setEndGame}) => {

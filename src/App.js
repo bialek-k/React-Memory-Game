@@ -12,9 +12,7 @@ import Zuma from './photos/Zuma.png';
 import CardBoard from "./Components/CardBoard/CardBoard";
 import Player from "./Components/Player/Player"
 
-// Import style.css
 import './App.css';
-
 
 
 function App() {
@@ -51,12 +49,7 @@ function App() {
   return (
     <div className="app">
       <Player
-        time={time}
-        setTime={setTime}
-        timeOn={timeOn}
-        setTimeOn={setTimeOn}
-        frontCard={frontCard}
-        cardFound={cardFound} />
+        time={time}/>
       <CardBoard
         cards={cards}
         setCards={setCards}
@@ -66,8 +59,7 @@ function App() {
         initialCards={initialCards}
         setCardFound={setCardFound}
         finalCards={finalCards}
-        setFinalCards={setFinalCards}
-        />
+        setFinalCards={setFinalCards}/>
     </div>
   );
 }

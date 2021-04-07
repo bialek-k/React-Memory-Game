@@ -1,7 +1,8 @@
 import React  from 'react'
 import './Player.css'
 
-export const Player = ({time, timeOn, setTime, setTimeOn, frontCard, cardFound }) => {
+export const Player = ({time}) => {
+	const timer = (base) => (`0${Math.floor((time / base) % 60)}`).slice(-2);
 
 	return (
 		<div className="container">
@@ -9,8 +10,8 @@ export const Player = ({time, timeOn, setTime, setTimeOn, frontCard, cardFound }
 			<div className="stats">
 				<div className="time">
 					<span>Time: </span> 
-					<span>{("0" + Math.floor((time / 60000) % 60)).slice(-2)}:</span>
-					<span>{("0" + Math.floor((time / 1000) % 60)).slice(-2)}</span>
+					<span>{timer(60000)}:</span>
+					<span>{timer(1000)}:</span>
 				</div>
 			</div>
 		</div>
