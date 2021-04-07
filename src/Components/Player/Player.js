@@ -11,7 +11,7 @@ export const Player = ({time}) => {
 				<div className="time">
 					<span>Time: </span> 
 					<span>{timer(60000)}:</span>
-					<span>{timer(1000)}:</span>
+					<span>{timer(1000)}</span>
 				</div>
 			</div>
 		</div>

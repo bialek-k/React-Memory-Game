@@ -48,7 +48,7 @@ const CardBoard = ({ cards, setCards, frontCard, setFrontCard, cardFound, setCar
 					cards={cards}
 					id={card.id}
 					cardFound={cardFound}
-			setCardFound={setCardFound}
+					setCardFound={setCardFound}
 					/>
 			))}
 		</div>

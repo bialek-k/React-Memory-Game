@@ -49,7 +49,8 @@ function App() {
   return (
     <div className="app">
       <Player
-        time={time}/>
+        time={time}
+        frontCard={frontCard}/>
       <CardBoard
         cards={cards}
         setCards={setCards}
