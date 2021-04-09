@@ -1,28 +1,30 @@
 import React from 'react'
 import "./Card.css";
 
-const Card = ({ photo, flipped, setCards, cards, id, frontCard, setFrontCard}) => {
+const Card = ({ photo, flipped, setCards, cards, id, frontCard, setFrontCard, timeOn, setTimeOn}) => {
   //Functions Flip Card
   const flipCard = (id) => {
-  const newState = cards.map((item) => {
-    if(item.id === id){
-      const updateItem = {
-        ...item,
-        flipped: !item.flipped,
+    const newState = cards.map((item) => {
+      if(item.id === id){
+        const updateItem = {
+          ...item,
+          flipped: !item.flipped,
+        }
+        return updateItem;
       }
-      return updateItem;
-    }
-    return item;
-  });
-  setCards(newState);
-  compareHandler(newState, id);
+      return item;
+    });
+
+    setCards(newState);
+    compareHandler(newState, id);
+    setTimeOn(true);
+
   }
   
   // Add Card to new Array for compare
   const compareHandler = (newState, id) => {
     let clickedCard = newState.filter((card) => card.id === id);
     setFrontCard([ ...frontCard, ...clickedCard]);
-
   }
   
   const cardFront = {
