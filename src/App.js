@@ -11,6 +11,7 @@ import Zuma from './photos/Zuma.png';
 // Import components
 import CardBoard from "./Components/CardBoard/CardBoard";
 import Player from "./Components/Player/Player"
+import NewPlayer from "./Components/NewPlayer/NewPlayer";
 import './App.css';
 
 function App() {
@@ -43,26 +44,39 @@ function App() {
   const [ time, setTime ] = useState(0);
   const [ timeOn, setTimeOn ] = useState(false);
 
+  const [startModal, setStartModal] = useState(false);
+
+  let gameBoard = null;
+
+  if(startModal){
+    gameBoard = (
+      <div className="app">
+        <Player
+          time={time}
+          setTime={setTime}
+          timeOn={timeOn}
+          setTimeOn={setTimeOn}
+          frontCard={frontCard}/>
+        <CardBoard
+          cards={cards}
+          setCards={setCards}
+          frontCard={frontCard}
+          setFrontCard={setFrontCard}
+          cardFound={cardFound}
+          initialCards={initialCards}
+          setCardFound={setCardFound}
+          finalCards={finalCards}
+          setFinalCards={setFinalCards}
+          timeOn={timeOn}
+          setTimeOn={setTimeOn}/>
+      </div>
+    );
+  }
+
   return (
-    <div className="app">
-      <Player
-        time={time}
-        setTime={setTime}
-        timeOn={timeOn}
-        setTimeOn={setTimeOn}
-        frontCard={frontCard}/>
-      <CardBoard
-        cards={cards}
-        setCards={setCards}
-        frontCard={frontCard}
-        setFrontCard={setFrontCard}
-        cardFound={cardFound}
-        initialCards={initialCards}
-        setCardFound={setCardFound}
-        finalCards={finalCards}
-        setFinalCards={setFinalCards}
-        timeOn={timeOn}
-        setTimeOn={setTimeOn}/>
+    <div>
+      <NewPlayer />
+      {gameBoard}
     </div>
   );
 }

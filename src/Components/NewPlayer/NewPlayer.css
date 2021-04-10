@@ -1,0 +1,16 @@
+.login-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 150px;
+}
+
+
+.login-modal{
+    height: 300px;
+    width: 600px;
+    border: 1px solid rgb(158, 158, 158);
+    box-shadow: 0px 0px 8px rgb(150, 173, 216);
+	background-color: rgb(100, 149, 237);
+    border-radius: 5px;
+}
