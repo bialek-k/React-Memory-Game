@@ -19,7 +19,7 @@ export const Player = ({time, setTime, timeOn}) => {
 	
 	return (
 		<div className="container">
-			<div className="player">Player</div>
+			<div className="player">Guest</div>
 			<div className="stats">
 				<div className="time">
 					<span>Time: </span> 

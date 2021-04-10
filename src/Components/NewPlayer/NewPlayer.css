@@ -1,16 +1,54 @@
-.login-container{
+.login-container {
     display: flex;
     justify-content: center;
-    align-items: center;
-    margin-top: 150px;
+    margin-top: 100px;
 }
 
-
 .login-modal{
-    height: 300px;
-    width: 600px;
-    border: 1px solid rgb(158, 158, 158);
-    box-shadow: 0px 0px 8px rgb(150, 173, 216);
-	background-color: rgb(100, 149, 237);
-    border-radius: 5px;
+    background-color: cornflowerblue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+	border: 1px solid rgb(184, 184, 184);
+	box-shadow: 0px 0px 8px rgb(136, 136, 136);
+	border-radius: 12px;
+    padding: 20px;
+    width: 50%;
+    height: 150px;
+}
+
+.login-modal p{
+    margin: 0px;
+    font-family: grobold;
+    color: white;
+	text-shadow: 2px 2px 0px rgba(0, 0, 0, 1);
+}
+
+.login-modal button{
+    background: none;
+    border: 1px solid white;
+    padding: 8px 15px;
+    color: white;
+    font-family: grobold;
+	border-radius: 12px;
+	text-shadow: 2px 2px 0px rgba(0, 0, 0, 1);
+}
+
+.login-modal button:hover {
+    background: white;
+    color: black;
+    text-shadow: none;
+}
+
+.login-modal input{
+    background: white;
+    border: none;
+    padding: 8px;
+    border-radius: 12px;
+}
+
+.login-modal input:focus,
+.login-modal input:hover{
+background: rgb(226, 226, 226);
 }

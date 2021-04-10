@@ -46,10 +46,12 @@ function App() {
 
   const [startModal, setStartModal] = useState(false);
 
-  let gameBoard = null;
-
-  if(startModal){
-    gameBoard = (
+ 
+    const login = (<NewPlayer 
+        startModal={startModal}
+        setStartModal={setStartModal} />)
+ 
+    const gameBoard = (
       <div className="app">
         <Player
           time={time}
@@ -71,12 +73,11 @@ function App() {
           setTimeOn={setTimeOn}/>
       </div>
     );
-  }
+  
 
   return (
     <div>
-      <NewPlayer />
-      {gameBoard}
+      {startModal ? gameBoard : login}
     </div>
   );
 }
