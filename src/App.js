@@ -31,50 +31,43 @@ function App() {
     {id: 12, photo: Zuma, flipped: false},
   ];
 
-  // Initial Cards Stat
   const [cards, setCards] = useState(initialCards);
-  // Flipped Cards
   const [frontCard, setFrontCard] = useState([]);
-  // Matched cards
   const [cardFound, setCardFound] = useState([]);
-  // Cards to check if game is end
   const [finalCards, setFinalCards] = useState([]);
-
-  // Timer on Player component
   const [ time, setTime ] = useState(0);
   const [ timeOn, setTimeOn ] = useState(false);
-
   const [startModal, setStartModal] = useState(false);
 
+  const login = (
+    <NewPlayer 
+      startModal={startModal}
+      setStartModal={setStartModal} />
+  );
  
-    const login = (<NewPlayer 
-        startModal={startModal}
-        setStartModal={setStartModal} />)
- 
-    const gameBoard = (
-      <div className="app">
-        <Player
-          time={time}
-          setTime={setTime}
-          timeOn={timeOn}
-          setTimeOn={setTimeOn}
-          frontCard={frontCard}/>
-        <CardBoard
-          cards={cards}
-          setCards={setCards}
-          frontCard={frontCard}
-          setFrontCard={setFrontCard}
-          cardFound={cardFound}
-          initialCards={initialCards}
-          setCardFound={setCardFound}
-          finalCards={finalCards}
-          setFinalCards={setFinalCards}
-          timeOn={timeOn}
-          setTimeOn={setTimeOn}/>
-      </div>
-    );
+  const gameBoard = (
+    <div className="app">
+      <Player
+        time={time}
+        setTime={setTime}
+        timeOn={timeOn}
+        setTimeOn={setTimeOn}
+        frontCard={frontCard}/>
+      <CardBoard
+        cards={cards}
+        setCards={setCards}
+        frontCard={frontCard}
+        setFrontCard={setFrontCard}
+        cardFound={cardFound}
+        initialCards={initialCards}
+        setCardFound={setCardFound}
+        finalCards={finalCards}
+        setFinalCards={setFinalCards}
+        timeOn={timeOn}
+        setTimeOn={setTimeOn}/>
+    </div>
+  );
   
-
   return (
     <div>
       {startModal ? gameBoard : login}

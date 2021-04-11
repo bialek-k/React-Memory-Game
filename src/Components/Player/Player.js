@@ -13,7 +13,7 @@ export const Player = ({time, setTime, timeOn}) => {
 			clearInterval(interval);
 		}
 		return () => clearInterval(interval)
-	},[timeOn])
+	},[timeOn]);
 
 	const getSec = (base) => (Math.floor((time / base) % 60));
 	

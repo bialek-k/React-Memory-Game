@@ -3,7 +3,6 @@ import Card from '../Card/Card';
 import './CardBoard.css'
 
 const CardBoard = ({ cards, setCards, frontCard, setFrontCard, cardFound, setCardFound, finalCards, setFinalCards, initialCards, timeOn, setTimeOn}) => {
-	// shuffle the cards at the start of the game
 	initialCards.sort(() => Math.random() - 0.5);
 
 	if(frontCard.length > 1){
@@ -22,11 +21,11 @@ const CardBoard = ({ cards, setCards, frontCard, setFrontCard, cardFound, setCar
 		setTimeout(() => {
 			setCards([...finalCards])
 		},500)
-	}
+	};
 
 	if(cardFound.length === 12){
 	setTimeOn(false);		
-	}
+	};
 
 	// First board load
 	useEffect(() => {
