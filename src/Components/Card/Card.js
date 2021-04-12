@@ -18,7 +18,6 @@ const Card = ({ photo, flipped, setCards, cards, id, frontCard, setFrontCard, ti
     setCards(newState);
     compareHandler(newState, id);
     setTimeOn(true);
-
   }
   
   // Add Card to new Array for compare

@@ -2,8 +2,9 @@ import React, { useEffect } from 'react'
 import Card from '../Card/Card';
 import './CardBoard.css'
 
-const CardBoard = ({ cards, setCards, frontCard, setFrontCard, cardFound, setCardFound, finalCards, setFinalCards, initialCards, timeOn, setTimeOn}) => {
-	initialCards.sort(() => Math.random() - 0.5);
+const CardBoard = ({ cards, setCards, frontCard, setFrontCard, cardFound, setCardFound, finalCards, setFinalCards, initialCards, timeOn, setTimeOn, moves, setMoves, setEndGame }) => {
+
+	initialCards.sort(() => Math.random() - 0.4);
 
 	if(frontCard.length > 1){
 		if(frontCard[0].photo === frontCard[1].photo && frontCard[0].id !== frontCard[1].id){
@@ -14,6 +15,7 @@ const CardBoard = ({ cards, setCards, frontCard, setFrontCard, cardFound, setCar
 		}else{
 			setFrontCard([]);
 		}
+		setMoves(moves + 1);
 	}
 
 	// Flip Card Back
@@ -24,14 +26,14 @@ const CardBoard = ({ cards, setCards, frontCard, setFrontCard, cardFound, setCar
 	};
 
 	if(cardFound.length === 12){
-	setTimeOn(false);		
+		setTimeOn(false);		
+		setEndGame(true);
 	};
 
 	// First board load
 	useEffect(() => {
 		setFinalCards([...cards]);
 	},[]);
-
 
 	return (
 		<div className="cardBoard">

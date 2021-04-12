@@ -1,7 +1,7 @@
 import React, {useEffect}  from 'react'
 import './Player.css'
 
-export const Player = ({time, setTime, timeOn, playerName}) => {
+export const Player = ({time, setTime, timeOn, playerName, moves}) => {
 	
 	useEffect(() => {
 		let interval = null;
@@ -15,17 +15,18 @@ export const Player = ({time, setTime, timeOn, playerName}) => {
 		return () => clearInterval(interval)
 	},[timeOn]);
 
-	const getSec = (base) => (Math.floor((time / base) % 60));
+	const getSec = () => (Math.floor((time / 1000) % 60));
 	
 	return (
 		<div className="container">
 			<div className="player">{playerName}</div>
-			<div className="stats">
+			<div className="player-stats">
 				<div className="time">
 					<span>Time: </span> 
 					<span></span>
-					<span>{getSec(1000)} sec</span>
+					<span>{getSec()} sec</span>
 				</div>
+				<span>Moves: {moves}</span>
 			</div>
 		</div>
 	)

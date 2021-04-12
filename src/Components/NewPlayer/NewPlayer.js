@@ -4,7 +4,6 @@ import "./NewPlayer.css"
 
 const NewPlayer = ({playerName ,setStartModal, setPlayerName}) => {
 
-	
 	const inputName = (e) => {
 		e.preventDefault();
 		setPlayerName(e.target.value);
@@ -15,13 +14,11 @@ const NewPlayer = ({playerName ,setStartModal, setPlayerName}) => {
 		if(playerName === ""){
 			alert("Write your name, or press button below")
 		}else{
-
 			setStartModal(true);
 		}
 	}
 
 	const guestName = () => {
-		
 		setPlayerName("Great Player");
 		setStartModal(true);
 	}
