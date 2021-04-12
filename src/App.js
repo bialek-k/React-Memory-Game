@@ -38,11 +38,14 @@ function App() {
   const [ time, setTime ] = useState(0);
   const [ timeOn, setTimeOn ] = useState(false);
   const [startModal, setStartModal] = useState(false);
+  const [playerName, setPlayerName] = useState("");
 
   const login = (
     <NewPlayer 
       startModal={startModal}
-      setStartModal={setStartModal} />
+      setStartModal={setStartModal}
+      playerName={playerName}
+      setPlayerName={setPlayerName} />
   );
  
   const gameBoard = (
@@ -52,7 +55,9 @@ function App() {
         setTime={setTime}
         timeOn={timeOn}
         setTimeOn={setTimeOn}
-        frontCard={frontCard}/>
+        frontCard={frontCard}
+        playerName={playerName}
+        setPlayerName={setPlayerName}/>
       <CardBoard
         cards={cards}
         setCards={setCards}

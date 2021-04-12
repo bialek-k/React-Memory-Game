@@ -2,6 +2,7 @@
     display: flex;
     justify-content: center;
     margin-top: 100px;
+    min-width: 700px;
 }
 
 .login-modal{
@@ -13,8 +14,8 @@
 	border: 1px solid rgb(184, 184, 184);
 	box-shadow: 0px 0px 8px rgb(136, 136, 136);
 	border-radius: 12px;
-    padding: 20px;
-    width: 35%;
+    padding: 20px 150px;
+    /* width: 35%; */
     height: 150px;
 }
 
@@ -34,6 +35,7 @@
     font-family: grobold;
 	border-radius: 12px;
 	text-shadow: 2px 2px 0px rgba(0, 0, 0, 1);
+    font-size: 20px;
 }
 
 .login-modal button:hover {
@@ -44,6 +46,7 @@
 
 .login-modal input{
     background: white;
+    background: rgb(226, 226, 226);
     border: none;
     padding: 8px;
     border-radius: 12px;
@@ -51,5 +54,10 @@
 
 .login-modal input:focus,
 .login-modal input:hover{
-background: rgb(226, 226, 226);
+    background: white;
+}
+
+.play {
+    font-size: 20px;
+    margin-left: 10px;
 }

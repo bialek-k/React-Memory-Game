@@ -1,7 +1,7 @@
 import React, {useEffect}  from 'react'
 import './Player.css'
 
-export const Player = ({time, setTime, timeOn}) => {
+export const Player = ({time, setTime, timeOn, playerName}) => {
 	
 	useEffect(() => {
 		let interval = null;
@@ -19,7 +19,7 @@ export const Player = ({time, setTime, timeOn}) => {
 	
 	return (
 		<div className="container">
-			<div className="player">Guest</div>
+			<div className="player">{playerName}</div>
 			<div className="stats">
 				<div className="time">
 					<span>Time: </span> 
