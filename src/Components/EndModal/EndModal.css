@@ -1,64 +1,55 @@
 .end-container {
   display: flex;
+  font-family: grobold;
+  align-items: center;
   justify-content: center;
-  margin: 100px;
-  min-width: 700px;
+  background-color: cornflowerblue;
+  /* background: red; */
+  height: 100vh;
+
 }
 
-.end-modal{
-  background-color: cornflowerblue;
+ .end-modal{
   display: flex;
   flex-direction: column;
+  width: 100%;
   align-items: center;
-  justify-content: space-around;
-  border: 1px solid rgb(184, 184, 184);
-  box-shadow: 0px 0px 8px rgb(136, 136, 136);
-  border-radius: 12px;
-  padding: 20px 100px;
-  height: 250px;
+  justify-content: space-evenly;
+  height: 50vh;
   color: white;
-  font-family: grobold;
   text-shadow: 2px 2px 0px rgba(0, 0, 0, 1);
 }
 
+.end-modal h1{
+  font-size: 2rem;
+  line-height: 3rem;
+  text-align: center;
+}
+
 .stats{
+  margin: 10px 0px;
   display: flex;
   flex-direction: column;
-  margin-bottom: 20px;
-  height: 90px;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
 	color: white;
 	text-shadow: 2px 2px 0px rgba(0, 0, 0, 1);
 	
 }
+.stats span{
+  margin: 5px 0px;
+}
 .btn{
   display: flex;
-  justify-content: space-evenly;
-  
-  /* background: yellow; */
+  justify-content: space-around;
+  width: 80%;
 }
-
-.stats span{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.end-modal button{
+.btn button {
   background: none;
   border: none;
-  padding: 8px 15px;
   color: white;
   font-family: grobold;
-  border-radius: 12px;
   text-shadow: 2px 2px 0px rgba(0, 0, 0, 1);
-  font-size: 20px;
-}
-
-.end-modal button:hover {
-  background: white;
-  color: black;
-  text-shadow: none;
+  font-size: 1rem;
 }

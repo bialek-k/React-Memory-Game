@@ -1,36 +1,24 @@
 .container{
 	display: flex;
+	color: white;
+	text-shadow: 2px 2px 0px rgba(0, 0, 0, 1);
+	font-family: GROBOLD, sans-serif;
+	align-items: center;
 	justify-content: space-between;
 	background-color: cornflowerblue;
-	padding: 25px;
-	border-radius: 12px;
-	border: 1px solid rgb(184, 184, 184);
-	box-shadow: 0px 0px 8px rgb(136, 136, 136);
-	margin-bottom: 10px;
-	width:830px;
-	font-family: GROBOLD, sans-serif;
+	padding: 15px 30px;
+	width: 100vw;
+	box-shadow: 0px 3px 5px rgb(177, 177, 177);
 }
 
 .player{
-	font-size: 50px;
+	font-size: 1.2rem;
 	color: white;
 	text-shadow: 2px 2px 0px rgba(0, 0, 0, 1);
 }
 .player-stats{
 	display: flex;
-	color: white;
-	text-shadow: 2px 2px 0px rgba(0, 0, 0, 1);
 	flex-direction: column;
 	justify-content: center;
 	align-items: flex-end;
-}
-
-.points{
-	font-size: 1.5rem;
-}
-
-.time{
-	box-sizing: border-box;
-	display: flex;
-	font-size: 2rem;
 }

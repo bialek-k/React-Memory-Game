@@ -1,5 +1,6 @@
 import React from 'react'
 
+
 import "./NewPlayer.css"
 
 const NewPlayer = ({playerName ,setStartModal, setPlayerName}) => {
@@ -24,14 +25,13 @@ const NewPlayer = ({playerName ,setStartModal, setPlayerName}) => {
 	}
 	
 	return (
-		<div className="login-container">
+		<div className="login-wrapper">
 			<form className="login-modal" onSubmit={submitName}>
 				<p>Write your name</p>
-				<div>
 					<input type="text" name="name" onChange={inputName}/>
 			 		<button type="submit" className="play">Play!</button>
-				</div>
-				<button onClick={guestName}>Play as a guest</button>
+					 <h3 className="login-guest" onClick={guestName}>or play as a guest</h3>
+				{/* <button onClick={guestName}>Play as a guest</button> */}
 			</form>
 		</div>
 	)

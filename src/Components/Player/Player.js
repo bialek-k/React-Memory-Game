@@ -21,7 +21,7 @@ export const Player = ({time, setTime, timeOn, playerName, moves}) => {
 		<div className="container">
 			<div className="player">{playerName}</div>
 			<div className="player-stats">
-				<div className="time">
+				<div>
 					<span>Time: </span> 
 					<span></span>
 					<span>{getSec()} sec</span>

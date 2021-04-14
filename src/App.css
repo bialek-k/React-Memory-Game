@@ -1,12 +1,11 @@
 .app{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 80vw;
-  margin: 10px auto;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ justify-items: center;
 }
 
 .end-game{
-  filter: blur(3px);
+  display: none;
+  /* filter: blur(3px); */
 }

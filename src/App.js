@@ -41,7 +41,7 @@
     const [ time, setTime ] = useState(0);
     const [ timeOn, setTimeOn ] = useState(false);
     const [startModal, setStartModal] = useState(false);
-    const [playerName, setPlayerName] = useState("(-_-)");
+    const [playerName, setPlayerName] = useState("IGORAS");
     const [endGame, setEndGame] = useState(false);
 
     const startDiv = (
