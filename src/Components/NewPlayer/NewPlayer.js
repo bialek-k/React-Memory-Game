@@ -26,12 +26,15 @@ const NewPlayer = ({playerName ,setStartModal, setPlayerName}) => {
 	
 	return (
 		<div className="login-wrapper">
+			<div className="title">
+				<h1>Memory Game</h1>
+				<h3>made by Krzysztof Białek</h3>
+			</div>
 			<form className="login-modal" onSubmit={submitName}>
 				<p>Write your name</p>
 					<input type="text" name="name" onChange={inputName}/>
 			 		<button type="submit" className="play">Play!</button>
 					 <h3 className="login-guest" onClick={guestName}>or play as a guest</h3>
-				{/* <button onClick={guestName}>Play as a guest</button> */}
 			</form>
 		</div>
 	)
