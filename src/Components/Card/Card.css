@@ -8,3 +8,24 @@
   background-color: rgba(233, 233, 233, 0.596);
   border: 1px solid rgb(184, 184, 184);
 }
+
+@media screen and (min-width: 768px){
+	.card{
+	height: 160px;
+  width: 120px;
+	}
+}
+
+@media screen and (min-width: 1024px){
+	.card{
+		height: 200px;
+    width: 120px;
+	}
+}
+
+@media screen and (min-width: 1440px){
+  .card{
+    height: 250px;
+    width: 150px;
+  }
+}
