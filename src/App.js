@@ -33,7 +33,7 @@
       {id: 12, photo: Zuma, flipped: false},
     ];
 
-    const [cards, setCards] = useState(initialCards);
+    const [cards, setCards] = useState(initialCards.sort(() => Math.random() - 0.4));
     const [frontCard, setFrontCard] = useState([]);
     const [cardFound, setCardFound] = useState([]);
     const [finalCards, setFinalCards] = useState([]);

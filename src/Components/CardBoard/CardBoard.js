@@ -4,7 +4,9 @@ import './CardBoard.css'
 
 const CardBoard = ({ cards, setCards, frontCard, setFrontCard, cardFound, setCardFound, finalCards, setFinalCards, initialCards, timeOn, setTimeOn, moves, setMoves, setEndGame }) => {
 
-	initialCards.sort(() => Math.random() - 0.4);
+	// useEffect(() => {
+	// 	initialCards.sort(() => Math.random() - 0.4);
+	// },[])
 
 	if(frontCard.length > 1){
 		if(frontCard[0].photo === frontCard[1].photo && frontCard[0].id !== frontCard[1].id){
