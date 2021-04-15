@@ -15,7 +15,7 @@ const getSec = (base) => (Math.floor((time / base) % 60));
         </div>
         <div className="btn">
           <button>Play Again</button>
-          <button>More abotu me</button>
+          <button>More about me</button>
         </div>
       </div>
     </div>

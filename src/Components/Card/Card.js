@@ -28,7 +28,7 @@ const Card = ({ photo, flipped, setCards, cards, id, frontCard, setFrontCard, ti
   
   const cardFront = {
     background: `url(${photo})`,
-    backgroundSize: '90%',
+    backgroundSize: '75%',
     backgroundRepeat: 'no-repeat',
     backgroundPosition: 'center',
   }

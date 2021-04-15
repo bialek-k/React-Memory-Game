@@ -26,6 +26,7 @@
 @media screen and (min-width: 768px){
 	.container{
 		height: 120px;
+		width: 100%;
 	}
 	.player-stats{
 		font-size: 1.4rem;
@@ -37,11 +38,4 @@
 		width: 700px;
 		border-radius: 0px 0px 15px 15px;
 	}
-}
-
-
-@media screen and (min-width: 1440px){
-.container{
-
-}
 }
