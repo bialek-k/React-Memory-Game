@@ -24,7 +24,7 @@
 }
 
 .login-modal p {
-    font-size: 1.7rem;
+    font-size: 1.8rem;
     color: white;
 	text-shadow: 2px 2px 0px rgba(0, 0, 0, 1);
 }
@@ -56,101 +56,10 @@ input, select, textarea{
 }
 
 .login-guest{
-    font-family: Tahoma, sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size: 0.8rem;
-	color: rgb(212, 221, 238);
-    letter-spacing: 2px; 
-    font-style: italic;   
-}
-
-
-
-
-
-/* @media screen and (max-width: 600px) {
-    .login-wrapper {
-      background-color: white;
-    }
-  } */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* 
-.login-container {
-    display: flex;
-    justify-content: center;
-    margin-top: 100px;
-    min-width: 700px;
-}
-
-.login-modal{
-    background-color: red;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-	border: 1px solid rgb(184, 184, 184);
-	box-shadow: 0px 0px 8px rgb(136, 136, 136);
-	border-radius: 12px;
-    padding: 20px 150px;
-    height: 150px;
-}
-
-.login-modal p{
-    margin: 0px;
-    font-size: 1.5rem;
-    font-family: grobold;
-    color: white;
+	color: rgb(255, 255, 255);
+    letter-spacing: 4px; 
+    font-weight: 300;
 	text-shadow: 2px 2px 0px rgba(0, 0, 0, 1);
 }
-
-.login-modal button{
-    background: none;
-    border: none;
-    padding: 8px 15px;
-    color: white;
-    font-family: grobold;
-	border-radius: 12px;
-	text-shadow: 2px 2px 0px rgba(0, 0, 0, 1);
-    font-size: 20px;
-}
-
-.login-modal button:hover {
-    background: white;
-    color: black;
-    text-shadow: none;
-}
-
-.login-modal input{
-    background: white;
-    background: rgb(226, 226, 226);
-    border: none;
-    padding: 8px;
-    border-radius: 12px;
-}
-
-.login-modal input:focus,
-.login-modal input:hover{
-    background: white;
-}
-
-.play {
-    font-size: 20px;
-    margin-left: 10px;
-} */
