@@ -72,21 +72,23 @@
           playerName={playerName}
           setPlayerName={setPlayerName}
           moves={moves}/>
-        <CardBoard
-          cards={cards}
-          setCards={setCards}
-          frontCard={frontCard}
-          setFrontCard={setFrontCard}
-          cardFound={cardFound}
-          initialCards={initialCards}
-          setCardFound={setCardFound}
-          finalCards={finalCards}
-          setFinalCards={setFinalCards}
-          timeOn={timeOn}
-          setTimeOn={setTimeOn}
-          moves={moves}
-          setMoves={setMoves}
-          setEndGame={setEndGame}/>
+          <div className="card-grid">
+          <CardBoard
+            cards={cards}
+            setCards={setCards}
+            frontCard={frontCard}
+            setFrontCard={setFrontCard}
+            cardFound={cardFound}
+            initialCards={initialCards}
+            setCardFound={setCardFound}
+            finalCards={finalCards}
+            setFinalCards={setFinalCards}
+            timeOn={timeOn}
+            setTimeOn={setTimeOn}
+            moves={moves}
+            setMoves={setMoves}
+            setEndGame={setEndGame}/>
+          </div>
       </div>
     );
   

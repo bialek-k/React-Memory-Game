@@ -1,6 +1,6 @@
 .card {
-  height: 110px;
-  width: 90px;
+  height: 135px;
+  width: 95px;
   align-self: center;
   justify-self: center;
   border-radius: 12px;
@@ -11,21 +11,21 @@
 
 @media screen and (min-width: 768px){
 	.card{
-	height: 160px;
-  width: 120px;
+	height: 230px;
+  width: 140px;
 	}
 }
 
 @media screen and (min-width: 1024px){
 	.card{
-		height: 200px;
-    width: 120px;
+		height: 280px;
+    width: 180px;
 	}
 }
 
 @media screen and (min-width: 1440px){
   .card{
-    height: 250px;
-    width: 150px;
+    height: 320px;
+    width: 220px;
   }
 }

@@ -10,3 +10,11 @@
   display: none;
   /* filter: blur(3px); */
 }
+
+.card-grid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+
+}
