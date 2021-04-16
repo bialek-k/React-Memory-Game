@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/React-Memory-Game/static/css/main.6db43cb5.chunk.css",
+    "main.css": "/React-Memory-Game/static/css/main.81e7a8dc.chunk.css",
     "main.js": "/React-Memory-Game/static/js/main.945b29b4.chunk.js",
     "main.js.map": "/React-Memory-Game/static/js/main.945b29b4.chunk.js.map",
     "runtime-main.js": "/React-Memory-Game/static/js/runtime-main.981f51c7.js",
@@ -10,7 +10,7 @@
     "static/js/3.39d26743.chunk.js": "/React-Memory-Game/static/js/3.39d26743.chunk.js",
     "static/js/3.39d26743.chunk.js.map": "/React-Memory-Game/static/js/3.39d26743.chunk.js.map",
     "index.html": "/React-Memory-Game/index.html",
-    "static/css/main.6db43cb5.chunk.css.map": "/React-Memory-Game/static/css/main.6db43cb5.chunk.css.map",
+    "static/css/main.81e7a8dc.chunk.css.map": "/React-Memory-Game/static/css/main.81e7a8dc.chunk.css.map",
     "static/js/2.bc8f33ad.chunk.js.LICENSE.txt": "/React-Memory-Game/static/js/2.bc8f33ad.chunk.js.LICENSE.txt",
     "static/media/Chase.ad11dd4f.png": "/React-Memory-Game/static/media/Chase.ad11dd4f.png",
     "static/media/index.css": "/React-Memory-Game/static/media/GROBOLD.c1707969.ttf",
@@ -23,7 +23,7 @@
   "entrypoints": [
     "static/js/runtime-main.981f51c7.js",
     "static/js/2.bc8f33ad.chunk.js",
-    "static/css/main.6db43cb5.chunk.css",
+    "static/css/main.81e7a8dc.chunk.css",
     "static/js/main.945b29b4.chunk.js"
   ]
 }
