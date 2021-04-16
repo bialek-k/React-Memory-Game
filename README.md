@@ -1,6 +1,7 @@
-# Getting Started with Create React App
+# Memory Game | Paw Patrol
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Hello World!
+This is my first project in React.js
 
 ## Available Scripts
 
