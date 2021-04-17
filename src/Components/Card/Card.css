@@ -1,6 +1,6 @@
 .card {
-  height: 135px;
-  width: 95px;
+  height: 115px;
+  width: 85px;
   align-self: center;
   justify-self: center;
   border-radius: 12px;
@@ -9,17 +9,27 @@
   border: 1px solid rgb(184, 184, 184);
 }
 
-@media screen and (min-width: 768px){
+@media screen and (max-width: 650px) and (min-height: 400px){
+  .card{
+    height: 120px;
+    width: 90px;
+  }
+}
+
+@media screen and (min-width: 768px) and (min-height: 657px){
 	.card{
-	height: 230px;
-  width: 140px;
+	height: 150px;
+  width: 100px;
 	}
 }
 
-@media screen and (min-width: 1024px){
+@media screen and (min-width: 1024px) and (min-height: 657px){
 	.card{
-		height: 280px;
-    width: 180px;
+		height: 150px;
+    width: 100px;
+    
+    /* height: 280px;
+    width: 180px; */
 	}
 }
 
