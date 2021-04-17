@@ -1,8 +1,9 @@
 import React from 'react'
 import "./Card.css";
 
-const Card = ({ photo, flipped, setCards, cards, id, frontCard, setFrontCard, timeOn, setTimeOn}) => {
-  //Functions Flip Card
+const Card = ({ photo, flipped, setCards, cards, id, frontCard, setFrontCard, setTimeOn}) => {
+
+  /* Flip Cards */
   const flipCard = (id) => {
     const newState = cards.map((item) => {
       if(item.id === id){
@@ -14,7 +15,6 @@ const Card = ({ photo, flipped, setCards, cards, id, frontCard, setFrontCard, ti
       }
       return item;
     });
-
     setCards(newState);
     compareHandler(newState, id);
     setTimeOn(true);
@@ -26,11 +26,16 @@ const Card = ({ photo, flipped, setCards, cards, id, frontCard, setFrontCard, ti
     setFrontCard([ ...frontCard, ...clickedCard]);
   }
   
-  const cardFront = {
-    background: `url(${photo})`,
-    backgroundSize: '75%',
-    backgroundRepeat: 'no-repeat',
-    backgroundPosition: 'center',
+  const cardFront = () => {
+
+    const front = {
+      background: `url(${photo})`,
+      backgroundSize: '75%',
+      backgroundRepeat: 'no-repeat',
+      backgroundPosition: 'center',
+      pointerEvents: "none",
+    }
+    return front;
   }
   
   const cardBack = {
@@ -40,7 +45,7 @@ const Card = ({ photo, flipped, setCards, cards, id, frontCard, setFrontCard, ti
   return (
     <div className="card"
       onClick={() => flipCard(id)}
-      style={flipped ? cardFront : cardBack}
+      style={flipped ? cardFront() : cardBack}
       photo={photo}>
     </div>
   )

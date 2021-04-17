@@ -40,9 +40,10 @@
     const [moves, setMoves] = useState(0);
     const [ time, setTime ] = useState(0);
     const [ timeOn, setTimeOn ] = useState(false);
-    const [startModal, setStartModal] = useState(false);
-    const [playerName, setPlayerName] = useState("IGORAS");
+    const [startModal, setStartModal] = useState(true);
+    const [playerName, setPlayerName] = useState("");
     const [endGame, setEndGame] = useState(false);
+    const [reset, setReset] = useState(false);
 
     const startDiv = (
       <NewPlayer 
@@ -57,7 +58,10 @@
         moves={moves}
         time={time}
         endGame={endGame}
+        setEndGame={setEndGame}
+        setStartModal={setStartModal}
         playerName={playerName}
+        setReset={setReset}
         />
     );
 
@@ -73,21 +77,21 @@
           setPlayerName={setPlayerName}
           moves={moves}/>
           <div className="card-grid">
-          <CardBoard
-            cards={cards}
-            setCards={setCards}
-            frontCard={frontCard}
-            setFrontCard={setFrontCard}
-            cardFound={cardFound}
-            initialCards={initialCards}
-            setCardFound={setCardFound}
-            finalCards={finalCards}
-            setFinalCards={setFinalCards}
-            timeOn={timeOn}
-            setTimeOn={setTimeOn}
-            moves={moves}
-            setMoves={setMoves}
-            setEndGame={setEndGame}/>
+            <CardBoard
+              cards={cards}
+              setCards={setCards}
+              frontCard={frontCard}
+              setFrontCard={setFrontCard}
+              cardFound={cardFound}
+              initialCards={initialCards}
+              setCardFound={setCardFound}
+              finalCards={finalCards}
+              setFinalCards={setFinalCards}
+              timeOn={timeOn}
+              setTimeOn={setTimeOn}
+              moves={moves}
+              setMoves={setMoves}
+              setEndGame={setEndGame}/>
           </div>
       </div>
     );

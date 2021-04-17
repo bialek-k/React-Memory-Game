@@ -1,10 +1,16 @@
 import React from 'react';
 import "./EndModal.css";
 
-const EndModal = ({moves, time, playerName}) => {
+const EndModal = ({moves, time, playerName, setReset, setEndGame}) => {
   
-const getSec = (base) => (Math.floor((time / base) % 60));
+  const getSec = (base) => (Math.floor((time / base) % 60));
 
+  const resetGame = () => {
+    // reset game:
+    setReset(true);
+    setEndGame(false);
+
+  }
   return (
     <div className="end-container">
       <div className="end-modal">
@@ -14,8 +20,8 @@ const getSec = (base) => (Math.floor((time / base) % 60));
           <span>You make: {moves} moves</span>
         </div>
         <div className="btn">
-          <button>Play Again</button>
-          <button>More about me</button>
+          <button onClick={resetGame}>Play Again</button>
+          {/* <button>More about me</button> */}
         </div>
       </div>
     </div>
