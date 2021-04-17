@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/React-Memory-Game/static/css/main.81e7a8dc.chunk.css",
-    "main.js": "/React-Memory-Game/static/js/main.945b29b4.chunk.js",
-    "main.js.map": "/React-Memory-Game/static/js/main.945b29b4.chunk.js.map",
+    "main.js": "/React-Memory-Game/static/js/main.55caa92b.chunk.js",
+    "main.js.map": "/React-Memory-Game/static/js/main.55caa92b.chunk.js.map",
     "runtime-main.js": "/React-Memory-Game/static/js/runtime-main.981f51c7.js",
     "runtime-main.js.map": "/React-Memory-Game/static/js/runtime-main.981f51c7.js.map",
     "static/js/2.bc8f33ad.chunk.js": "/React-Memory-Game/static/js/2.bc8f33ad.chunk.js",
@@ -12,18 +12,15 @@
     "index.html": "/React-Memory-Game/index.html",
     "static/css/main.81e7a8dc.chunk.css.map": "/React-Memory-Game/static/css/main.81e7a8dc.chunk.css.map",
     "static/js/2.bc8f33ad.chunk.js.LICENSE.txt": "/React-Memory-Game/static/js/2.bc8f33ad.chunk.js.LICENSE.txt",
-    "static/media/Chase.ad11dd4f.png": "/React-Memory-Game/static/media/Chase.ad11dd4f.png",
     "static/media/index.css": "/React-Memory-Game/static/media/GROBOLD.c1707969.ttf",
-    "static/media/Marshall.1fc6d3e9.png": "/React-Memory-Game/static/media/Marshall.1fc6d3e9.png",
-    "static/media/Rocky.602839cf.png": "/React-Memory-Game/static/media/Rocky.602839cf.png",
-    "static/media/Rubble.85ea6091.png": "/React-Memory-Game/static/media/Rubble.85ea6091.png",
-    "static/media/Skye.b895d852.png": "/React-Memory-Game/static/media/Skye.b895d852.png",
+    "static/media/Rocky.96b6ca55.png": "/React-Memory-Game/static/media/Rocky.96b6ca55.png",
+    "static/media/Rubble.e5472b56.png": "/React-Memory-Game/static/media/Rubble.e5472b56.png",
     "static/media/Zuma.8244b4cb.png": "/React-Memory-Game/static/media/Zuma.8244b4cb.png"
   },
   "entrypoints": [
     "static/js/runtime-main.981f51c7.js",
     "static/js/2.bc8f33ad.chunk.js",
     "static/css/main.81e7a8dc.chunk.css",
-    "static/js/main.945b29b4.chunk.js"
+    "static/js/main.55caa92b.chunk.js"
   ]
 }
