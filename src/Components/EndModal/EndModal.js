@@ -1,14 +1,19 @@
 import React from 'react';
 import "./EndModal.css";
 
-const EndModal = ({moves, time, playerName, setReset, setEndGame}) => {
+const EndModal = ({moves, time, playerName, setReset, setEndGame, setCards, initialCards}) => {
   
   const getSec = (base) => (Math.floor((time / base) % 60));
 
   const resetGame = () => {
     // reset game:
-    setReset(true);
-    // setEndGame(false);
+    setTimeout(() => {
+      setReset(true);
+      setEndGame(false);
+      setCards([initialCards])
+      
+
+    },500)
 
   }
   return (
