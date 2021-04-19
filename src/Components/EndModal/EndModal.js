@@ -8,7 +8,7 @@ const EndModal = ({moves, time, playerName, setReset, setEndGame}) => {
   const resetGame = () => {
     // reset game:
     setReset(true);
-    setEndGame(false);
+    // setEndGame(false);
 
   }
   return (
@@ -21,7 +21,6 @@ const EndModal = ({moves, time, playerName, setReset, setEndGame}) => {
         </div>
         <div className="btn">
           <button onClick={resetGame}>Play Again</button>
-          {/* <button>More about me</button> */}
         </div>
       </div>
     </div>

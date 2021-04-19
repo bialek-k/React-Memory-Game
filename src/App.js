@@ -41,7 +41,7 @@ function App() {
   const [moves, setMoves] = useState(0);
   const [time, setTime] = useState(0);
   const [timeOn, setTimeOn] = useState(false);
-  const [startModal, setStartModal] = useState(true);
+  const [startModal, setStartModal] = useState(false);
   const [playerName, setPlayerName] = useState("");
   const [endGame, setEndGame] = useState(false);
   const [reset, setReset] = useState(false);
