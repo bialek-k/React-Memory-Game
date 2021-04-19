@@ -32,6 +32,7 @@ const CardBoard = ({
       }
       setMoves(moves + 1);
     }
+
     // Flip Card Back
     if (frontCard.length === 2 && frontCard[0].photo !== frontCard[1].photo) {
       setTimeout(() => {

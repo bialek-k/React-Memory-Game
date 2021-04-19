@@ -63,6 +63,7 @@ function App() {
       setEndGame={setEndGame}
       setStartModal={setStartModal}
       playerName={playerName}
+      reset={reset}
       setReset={setReset}
     />
   );
