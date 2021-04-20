@@ -11,7 +11,7 @@ import Zuma from "./photos/Zuma.png";
 // Import components
 import CardBoard from "./Components/CardBoard/CardBoard";
 import Player from "./Components/Player/Player";
-import NewPlayer from "./Components/NewPlayer/NewPlayer";
+import Login from "./Components/Login/Login";
 import EndModal from "./Components/EndModal/EndModal";
 
 import "./App.css";
@@ -41,7 +41,7 @@ function App() {
   const [moves, setMoves] = useState(0);
   const [time, setTime] = useState(0);
   const [timeOn, setTimeOn] = useState(false);
-  const [startModal, setStartModal] = useState(false);
+  const [login, setLogin] = useState(true);
   const [playerName, setPlayerName] = useState("");
   const [endGame, setEndGame] = useState(false);
   const [reset, setReset] = useState(false);
@@ -50,70 +50,88 @@ function App() {
   //   setFinalCards([...cards]);
   // }, [setFinalCards]);
 
-  const startDiv = (
-    <NewPlayer
-      startModal={startModal}
-      setStartModal={setStartModal}
-      playerName={playerName}
-      setPlayerName={setPlayerName}
-    />
-  );
-
-  const endModal = (
-    <EndModal
-      moves={moves}
-      time={time}
-      endGame={endGame}
-      setEndGame={setEndGame}
-      setStartModal={setStartModal}
-      playerName={playerName}
-      reset={reset}
-      setReset={setReset}
-      setCards={setCards}
-      cards={cards}
-      initialCards={initialCards}
-    />
-  );
-
-  const gameBoard = (
-    <div className={endGame ? "app end-game" : "app"}>
-      <Player
-        time={time}
-        setTime={setTime}
-        timeOn={timeOn}
-        setTimeOn={setTimeOn}
-        frontCard={frontCard}
-        playerName={playerName}
-        setPlayerName={setPlayerName}
-        moves={moves}
-      />
-      <div className='card-grid'>
-        <CardBoard
-          cards={cards}
-          setCards={setCards}
-          frontCard={frontCard}
-          setFrontCard={setFrontCard}
-          cardFound={cardFound}
-          initialCards={initialCards}
-          setCardFound={setCardFound}
-          finalCards={finalCards}
-          setFinalCards={setFinalCards}
-          timeOn={timeOn}
-          setTimeOn={setTimeOn}
-          moves={moves}
-          setMoves={setMoves}
-          setEndGame={setEndGame}
-          reset={reset}
-          setReset={setReset}
+  const LoginModal = (props) => {
+    const isLoggedIn = login;
+    if (isLoggedIn) {
+      return (
+        <Login
+          login={login}
+          setLogin={setLogin}
+          playerName={playerName}
+          setPlayerName={setPlayerName}
         />
-      </div>
-    </div>
-  );
+      );
+    }
+    // return null;
+  };
+  console.log("playerName:", playerName);
+
+  // const startDiv = (
+  //   <NewPlayer
+  //     startModal={startModal}
+  //     setStartModal={setStartModal}
+  //     playerName={playerName}
+  //     setPlayerName={setPlayerName}
+  //   />
+  // );
+
+  // const endModal = (
+  //   <EndModal
+  //     moves={moves}
+  //     time={time}
+  //     endGame={endGame}
+  //     setEndGame={setEndGame}
+  //     setLogin={setLogin}
+  //     playerName={playerName}
+  //     reset={reset}
+  //     setReset={setReset}
+  //     setCards={setCards}
+  //     cards={cards}
+  //     initialCards={initialCards}
+  //   />
+  // );
+
+  // const gameBoard = (
+  //   <div className={endGame ? "app end-game" : "app"}>
+  //     <Player
+  //       time={time}
+  //       setTime={setTime}
+  //       timeOn={timeOn}
+  //       setTimeOn={setTimeOn}
+  //       frontCard={frontCard}
+  //       playerName={playerName}
+  //       setPlayerName={setPlayerName}
+  //       moves={moves}
+  //     />
+  //     <div className='card-grid'>
+  //       <CardBoard
+  //         cards={cards}
+  //         setCards={setCards}
+  //         frontCard={frontCard}
+  //         setFrontCard={setFrontCard}
+  //         cardFound={cardFound}
+  //         initialCards={initialCards}
+  //         setCardFound={setCardFound}
+  //         finalCards={finalCards}
+  //         setFinalCards={setFinalCards}
+  //         timeOn={timeOn}
+  //         setTimeOn={setTimeOn}
+  //         moves={moves}
+  //         setMoves={setMoves}
+  //         setEndGame={setEndGame}
+  //         reset={reset}
+  //         setReset={setReset}
+  //       />
+  //     </div>
+  //   </div>
+  // );
 
   return (
     <div>
-      {endGame ? endModal : null}
-      {startModal ? gameBoard : startDiv}
+      <LoginModal isLoggedIn={login} />
+
+      {/* {endGame ? endModal : null}
+      {startModal ? gameBoard : startDiv} */}
     </div>
   );
 }
