@@ -1,7 +1,7 @@
 import React from "react";
 import "./Login.css";
 
-const Login = ({ playerName, setLogin, setPlayerName, setStartGame }) => {
+const Login = ({ playerName, setLogin, setPlayerName}) => {
 
   const inputName = (e) => {
     e.preventDefault();
@@ -14,7 +14,7 @@ const Login = ({ playerName, setLogin, setPlayerName, setStartGame }) => {
       alert("Write your name, or press button below");
     } else {
       
-      setStartGame(false);
+      setLogin(false);
     }
   };
 
