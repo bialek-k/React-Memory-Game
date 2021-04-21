@@ -1,20 +1,20 @@
 import React from "react";
 import "./Login.css";
 
-const Login = ({ playerName, setLogin, setPlayerName }) => {
-  const name = React.createRef();
+const Login = ({ playerName, setLogin, setPlayerName, setStartGame }) => {
 
-  // const inputName = (e) => {
-  //   e.preventDefault();
-  // };
+  const inputName = (e) => {
+    e.preventDefault();
+    setPlayerName(e.target.value)
+  };
 
   const submitName = (e) => {
     e.preventDefault();
-    if (name === "") {
+    if (playerName === "") {
       alert("Write your name, or press button below");
     } else {
-      console.log(name);
-      // setLogin(false);
+      
+      setStartGame(false);
     }
   };
 
@@ -27,7 +27,7 @@ const Login = ({ playerName, setLogin, setPlayerName }) => {
     <div className='login-wrapper'>
       <form className='login-modal' onSubmit={submitName}>
         <p>Write your name</p>
-        <input type='text' ref={name} />
+        <input type='text' onChange={inputName} />
         <button type='submit' className='play'>
           Play!
         </button>

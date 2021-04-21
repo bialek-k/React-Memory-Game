@@ -1,5 +1,5 @@
 import React from 'react';
-import "./EndModal.css";
+import "./FinishRound.css";
 
 const EndModal = ({moves, time, playerName, setReset, setEndGame, setCards, initialCards}) => {
   
@@ -10,9 +10,7 @@ const EndModal = ({moves, time, playerName, setReset, setEndGame, setCards, init
     setTimeout(() => {
       setReset(true);
       setEndGame(false);
-      setCards([initialCards])
-      
-
+      setCards([initialCards]);
     },500)
 
   }
