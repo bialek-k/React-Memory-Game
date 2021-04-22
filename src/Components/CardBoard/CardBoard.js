@@ -16,7 +16,9 @@ const CardBoard = ({
   moves,
   setMoves,
   setEndGame,
-  setLogin
+  setLogin,
+  setFinishRound,
+  setStartGame
 }) => {
   useEffect(() => {
     if (frontCard.length > 1) {
@@ -44,7 +46,8 @@ const CardBoard = ({
     if (cardFound.length === cards.length) {
       setTimeOn(false);
       setLogin(false)
-
+      setFinishRound(true);
+      setStartGame(false);
       workingTimer();
     }
     return () => clearTimeout(workingTimer);

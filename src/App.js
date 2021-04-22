@@ -43,6 +43,8 @@ function App() {
   const [time, setTime] = useState(0);
   const [timeOn, setTimeOn] = useState(false);
   const [login, setLogin] = useState(true);
+  const [startGame, setStartGame] = useState(false);
+  const [finishRound, setFinishRound] = useState(false);
   const [playerName, setPlayerName] = useState("");
   const [endGame, setEndGame] = useState(false);
   const [reset, setReset] = useState(false);
@@ -56,6 +58,7 @@ function App() {
       setLogin={setLogin}
       playerName={playerName}
       setPlayerName={setPlayerName}
+      setStartGame={setStartGame}
     />
   );
 
@@ -91,6 +94,8 @@ function App() {
           setReset={setReset}
           login={login}
           setLogin={setLogin}
+          setStartGame={setStartGame}
+          setFinishRound={setFinishRound}
         />
       </div>
     </div>
@@ -108,13 +113,16 @@ function App() {
       setCards={setCards}
       cards={cards}
       initialCards={initialCards}
+      setStartGame={setStartGame}
     />
   );
 
   return (
     <div>
-      {login ? LoginModal : GameBoard}
-      {endGame ? Finish : null}
+      {login ? LoginModal : null}
+      {startGame ? GameBoard : null}
+      {finishRound ? Finish : null}
+
     </div>
   );
 }

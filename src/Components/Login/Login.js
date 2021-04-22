@@ -1,7 +1,7 @@
 import React from "react";
 import "./Login.css";
 
-const Login = ({ playerName, setLogin, setPlayerName}) => {
+const Login = ({ playerName, setLogin, setPlayerName, setStartGame}) => {
 
   const inputName = (e) => {
     e.preventDefault();
@@ -13,14 +13,15 @@ const Login = ({ playerName, setLogin, setPlayerName}) => {
     if (playerName === "") {
       alert("Write your name, or press button below");
     } else {
-      
       setLogin(false);
+      setStartGame(true);
     }
   };
-
+  
   const guestName = () => {
     setPlayerName("Great Player");
     setLogin(false);
+    setStartGame(true);
   };
 
   return (
