@@ -91,6 +91,14 @@ input, select, textarea{
 	text-shadow: 2px 2px 0px rgba(0, 0, 0, 1);
 }
 
+.error{
+    background-color: rgb(231, 38, 38);
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-size: 1.3rem;
+    color: rgb(255, 255, 255);
+}
+
 @media screen and (min-width: 1024px){
 	.login-modal input{
         background: white;

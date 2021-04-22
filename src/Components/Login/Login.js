@@ -1,22 +1,33 @@
-import React from "react";
+import React, {useState} from "react";
 import "./Login.css";
 
 const Login = ({ playerName, setLogin, setPlayerName, setStartGame}) => {
 
+  const [error, setError] = useState('');
+
+  
   const inputName = (e) => {
     e.preventDefault();
     setPlayerName(e.target.value)
   };
+  
+  
 
   const submitName = (e) => {
     e.preventDefault();
     if (playerName === "") {
-      alert("Write your name, or press button below");
+        setError("ERROR");
+      setTimeout(() => {
+        setError('')
+      },1800)
+      
     } else {
       setLogin(false);
       setStartGame(true);
     }
   };
+
+  const errorMsg = <div className="error">Please write your name</div>
   
   const guestName = () => {
     setPlayerName("Great Player");
@@ -28,6 +39,7 @@ const Login = ({ playerName, setLogin, setPlayerName, setStartGame}) => {
     <div className='login-wrapper'>
       <form className='login-modal' onSubmit={submitName}>
         <p>Write your name</p>
+        {error ? errorMsg : null}
         <input type='text' onChange={inputName} />
         <button type='submit' className='play'>
           Play!
