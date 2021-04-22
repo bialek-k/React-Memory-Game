@@ -11,8 +11,6 @@ const Login = ({ playerName, setLogin, setPlayerName, setStartGame}) => {
     setPlayerName(e.target.value)
   };
   
-  
-
   const submitName = (e) => {
     e.preventDefault();
     if (playerName === "") {

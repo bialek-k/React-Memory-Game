@@ -18,6 +18,7 @@ const Card = ({ photo, flipped, setCards, cards, id, frontCard, setFrontCard, se
     setCards(newState);
     compareHandler(newState, id);
     setTimeOn(true);
+
   }
   
   // Add Card to new Array for compare
@@ -25,9 +26,8 @@ const Card = ({ photo, flipped, setCards, cards, id, frontCard, setFrontCard, se
     let clickedCard = newState.filter((card) => card.id === id);
     setFrontCard([ ...frontCard, ...clickedCard]);
   }
-  
-  const cardFront = () => {
 
+  const cardFront = () => {
     const front = {
       background: `url(${photo})`,
       backgroundSize: '75%',
