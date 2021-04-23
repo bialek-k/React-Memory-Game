@@ -19,11 +19,7 @@ const CardBoard = ({
   setLogin,
   setFinishRound,
   setStartGame,
-  reset,
-  setReset,
-  login
 }) => {
-
   useEffect(() => {
     if (frontCard.length > 1) {
       if (
@@ -41,28 +37,33 @@ const CardBoard = ({
         }, 500);
       }
       setMoves(moves + 1);
+    } else if (frontCard.lengh > 2) {
+      return;
     }
+
     const workingTimer = () => {
       setTimeout(() => {
         setEndGame(true);
-      },500);
-    }
+      }, 500);
+    };
 
     if (cardFound.length === cards.length) {
+      cards.map((item) => {
+        return (item.flipped = false);
+      });
       setTimeOn(false);
-      setLogin(false)
+      setLogin(false);
       setFinishRound(true);
       setStartGame(false);
       workingTimer();
     }
     return () => {
-      clearTimeout(workingTimer)};
+      clearTimeout(workingTimer);
+    };
   });
 
-  
-  
   return (
-    <div className='cardBoard'>
+    <div className="cardBoard">
       {cards.map((card) => (
         <Card
           key={card.id}

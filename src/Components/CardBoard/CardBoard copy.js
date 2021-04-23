@@ -16,6 +16,9 @@ const CardBoard = ({
   moves,
   setMoves,
   setEndGame,
+  setLogin,
+  setFinishRound,
+  setStartGame,
 }) => {
   useEffect(() => {
     if (frontCard.length > 1) {
@@ -29,27 +32,32 @@ const CardBoard = ({
         setCardFound([...cardFound, ...frontCard]);
       } else {
         setFrontCard([]);
+        setTimeout(() => {
+          setCards([...finalCards]);
+        }, 500);
       }
       setMoves(moves + 1);
     }
-    // Flip Card Back
-    if (frontCard.length === 2 && frontCard[0].photo !== frontCard[1].photo) {
+    const workingTimer = () => {
       setTimeout(() => {
-        setCards([...finalCards]);
+        setEndGame(true);
       }, 500);
-    }
-    if (cardFound.length === 12) {
+    };
+
+    if (cardFound.length === cards.length) {
       setTimeOn(false);
-      setEndGame(true);
+      setLogin(false);
+      setFinishRound(true);
+      setStartGame(false);
+      workingTimer();
     }
+    return () => {
+      clearTimeout(workingTimer);
+    };
   });
-  // First board load
-  useEffect(() => {
-    setFinalCards([...cards]);
-  }, []);
 
   return (
-    <div className='cardBoard'>
+    <div className="cardBoard">
       {cards.map((card) => (
         <Card
           key={card.id}

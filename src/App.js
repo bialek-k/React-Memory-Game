@@ -35,7 +35,7 @@ function App() {
   const [cards, setCards] = useState(
     initialCards.sort(() => Math.random() - 0.4)
   );
-  
+
   const [frontCard, setFrontCard] = useState([]);
   const [cardFound, setCardFound] = useState([]);
   const [finalCards, setFinalCards] = useState(initialCards);
@@ -48,10 +48,6 @@ function App() {
   const [playerName, setPlayerName] = useState("");
   const [endGame, setEndGame] = useState(false);
   const [reset, setReset] = useState(false);
-
-  // useEffect(() => {
-  //   setFinalCards([...cards]);
-  // }, [setFinalCards]);
 
   const LoginModal = (
     <Login
@@ -74,7 +70,7 @@ function App() {
         setPlayerName={setPlayerName}
         moves={moves}
       />
-      <div className='card-grid'>
+      <div className="card-grid">
         <CardBoard
           cards={cards}
           setCards={setCards}
@@ -111,9 +107,12 @@ function App() {
       reset={reset}
       setReset={setReset}
       setCards={setCards}
+      setLogin={setLogin}
       cards={cards}
       initialCards={initialCards}
       setStartGame={setStartGame}
+      setFinishRound={setFinishRound}
+      startGame={startGame}
     />
   );
 
@@ -122,7 +121,6 @@ function App() {
       {login ? LoginModal : null}
       {startGame ? GameBoard : null}
       {finishRound ? Finish : null}
-
     </div>
   );
 }
