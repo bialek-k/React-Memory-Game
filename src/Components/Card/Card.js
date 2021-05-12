@@ -10,6 +10,8 @@ const Card = ({
   frontCard,
   setFrontCard,
   setTimeOn,
+  cardFound,
+  setCardFound,
 }) => {
   /* Flip Cards */
   const flipCard = (id) => {

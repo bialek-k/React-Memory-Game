@@ -17,9 +17,9 @@ export const Player = ({ time, setTime, timeOn, playerName, moves }) => {
   const getSec = () => Math.floor((time / 1000) % 60);
 
   return (
-    <div className='container'>
-      <div className='player'>{playerName}</div>
-      <div className='player-stats'>
+    <div className="container">
+      <div className="player">{playerName}</div>
+      <div className="player-stats">
         <div>
           <span>Time: </span>
           <span></span>

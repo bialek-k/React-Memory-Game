@@ -1,21 +1,22 @@
 import React from "react";
-import "./FinishRound.css";
+import "./FinishGame.css";
 
-const FinishRound = ({
+const FinishGame = ({
   moves,
   time,
   playerName,
-  setStartGame,
   setLogin,
   setFinishRound,
+  setStartGame,
+  finishRound,
 }) => {
   const getSec = (base) => Math.floor((time / base) % 60);
 
   const resetGame = () => {
     setFinishRound(false);
     // setStartGame(true);
-    setLogin(false);
-    console.log("game");
+    // setLogin(false);
+    // console.log("game");
   };
 
   return (
@@ -34,4 +35,4 @@ const FinishRound = ({
   );
 };
 
-export default FinishRound;
+export default FinishGame;

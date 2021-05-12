@@ -20,6 +20,7 @@ const CardBoard = ({
   setFinishRound,
   setStartGame,
 }) => {
+  // setTimeOn(true);
   useEffect(() => {
     if (frontCard.length > 1) {
       if (
@@ -48,19 +49,22 @@ const CardBoard = ({
     };
 
     if (cardFound.length === cards.length) {
-      cards.map((item) => {
-        return (item.flipped = false);
-      });
-      setTimeOn(false);
-      setLogin(false);
-      setFinishRound(true);
-      setStartGame(false);
-      workingTimer();
+      // setTimeOn(false);
+      // setLogin(false);
+      // setFinishRound(true);
+      // workingTimer();
     }
+
     return () => {
       clearTimeout(workingTimer);
     };
   });
+
+  useEffect(() => {
+    if (cardFound.length === cards.length) {
+      console.log(cards);
+    }
+  }, [cardFound, cards]);
 
   return (
     <div className="cardBoard">
